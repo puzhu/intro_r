@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Setup | A Minimal Book Example</title>
+  <title>Chapter 2 Setup R and RStudio | An illustrated introduction to R</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Setup | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,15 +16,15 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Setup | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
-<meta name="author" content="Yihui Xie" />
+<meta name="author" content="Hari Subhash" />
 
 
-<meta name="date" content="2021-05-23" />
+<meta name="date" content="2021-05-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,70 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -73,8 +137,20 @@
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Setup</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Pre-requisites</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Setup R and RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="setup.html"><a href="setup.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R</a></li>
+<li class="chapter" data-level="2.2" data-path="setup.html"><a href="setup.html#install-rstudio"><i class="fa fa-check"></i><b>2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="setup.html"><a href="setup.html#run-commands-in-the-console"><i class="fa fa-check"></i><b>2.3</b> Run commands in the console</a></li>
+<li class="chapter" data-level="2.4" data-path="setup.html"><a href="setup.html#dealing-with-errors"><i class="fa fa-check"></i><b>2.4</b> Dealing with errors</a></li>
+<li class="chapter" data-level="2.5" data-path="setup.html"><a href="setup.html#saving-code"><i class="fa fa-check"></i><b>2.5</b> Saving code</a></li>
+<li class="chapter" data-level="2.6" data-path="setup.html"><a href="setup.html#executing-a-script"><i class="fa fa-check"></i><b>2.6</b> Executing a script</a></li>
+<li class="chapter" data-level="2.7" data-path="setup.html"><a href="setup.html#rstudio-look-and-feel"><i class="fa fa-check"></i><b>2.7</b> RStudio look and feel</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
@@ -96,7 +172,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An illustrated introduction to R</a>
           </h1>
         </div>
 
@@ -105,10 +181,69 @@
 
             <section class="normal" id="section-">
 <div id="setup" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Setup</h1>
-<p>Our very first step is to download and install R. The sequence below is current as of August 2021. CRAN, which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could literally use any of the options here to download R. On the next screen, pick the version of R that corresponds to your operating system and install it on your machine.</p>
-<p><img src="assets/gifs/ch_1-setup/download_r.gif" /><!-- --></p>
+<h1><span class="header-section-number">Chapter 2</span> Setup R and RStudio</h1>
+<p>In this chapter, we will install R and RStudio and get familiar with executing some code.</p>
+<div id="install-r" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Install R</h2>
+<p>Our very first step is to download and install R. The sequence below is current as of August 2021. <a href="https://cran.r-project.org/">CRAN</a>, which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could literally use any of the options here to download R. On the next screen, pick the version of R that corresponds to your operating system and install it on your machine.</p>
+<p><img src="assets/ch_1-setup/gifs/download_r.gif" /><!-- --></p>
+<p>Once R is installed on your computer, your machine would be able to understand and execute any code that you write in R.</p>
+</div>
+<div id="install-rstudio" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Install RStudio</h2>
+<p>R comes with a basic editor for writing code. But we won’t use it in this book. Instead we will use RStudio.</p>
+<p>You can think of R Studio as a fully featured editor like Microsoft Word or Google docs, while the basic editor that ships with R is like the notepad or any other basic text editor. The community version of RStudio is free and packed with features that make our lives easier.</p>
+<!-- ```{r echo=FALSE} -->
+<!-- knitr::include_graphics("assets/ch_1-setup/images/editor_compare.png") -->
+<!-- ``` -->
+<p>You can download RStudio from the following <a href="https://www.rstudio.com/products/rstudio/download/#download">link</a>. Once you have R Studio installed, open it up to write your first few lines of code.</p>
+</div>
+<div id="run-commands-in-the-console" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Run commands in the console</h2>
+<p>Let’s print(“hello world”) as our first command.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="setup.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</span></code></pre></div>
+<p>The right angle bracket with blinking cursor shows the place where we can enter commands. You should follow along with the next sequence of steps so that you get familiar with typing commands in R.
+<img src="assets/ch_1-setup/gifs/hello_world.gif" /><!-- --></p>
+<p>Let’s try out a few basic arithmetic operations. Enter the arithmetic as shown below one line at a time.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="setup.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a href="setup.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">320</span> <span class="sc">*</span> <span class="dv">987</span></span>
+<span id="cb2-3"><a href="setup.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">12</span></span></code></pre></div>
+<p>You can think of the R console as a calculator on steroids. Similar to the calculator it allows us to enter commands and it prints the results of those below the command.</p>
+<p><img src="assets/ch_1-setup/gifs/console.gif" /><!-- --></p>
+</div>
+<div id="dealing-with-errors" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Dealing with errors</h2>
+<p>Computers, unlike humans are extremely finicky and precise about language. While humans can infer meaning from jumbled up words or incomplete sentences; computers will protest and complain even if a period is not where it is supposed to be. This means that at some point we will invariably type in something that yields an error. When that happens R will return an error message like the one shown below that indicates why there was an issue with executing a particular line of code.</p>
+<p><img src="assets/ch_1-setup/gifs/an_error.gif" /><!-- --></p>
+<p>Errors can be frustrating experience if you are new to coding. You might not immediately be able to tell why an error occurred and the error message from R can often seem very cryptic.</p>
+<p>Errors, however, are a part and parcel of programming. And a big component of your journey as a new programmer will be to learn how to understand and resolve them. The first and often best strategy is to copy paste the error message and search on google to see if others have resolved the same error with someone else. Initially even these solutions like those on forums like <a href="https://stackoverflow.com/questions/14469486/r-issue-object-not-found">stackoverflow</a> might seem hard to decipher and understand. But, eventually you will get to a point where you are not as flustered when you encounter them and have enough knowledge, tools and strategies in your arsenal to troubleshoot effectively. You might even come to enjoy the puzzle solving learning experience that an odd error brings 😄.</p>
+<p>I will deliberately introduce several errors as we go through this book to get us familiarized with them and teach you how to go about resolving them.</p>
+</div>
+<div id="saving-code" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Saving code</h2>
+<p>So far, we have typed commands into the console. But you will notice that there is no option to save the code that we have typed into the console. Most projects would require files that can be saved so that we can work on them over a period of time and execute them a multiple times without having to type them out each time.</p>
+<p>We can do this by placing code inside a file. There are many different types of files but, for now let’s start with a simple R script.</p>
+<p><img src="assets/ch_1-setup/gifs/new_file.gif" /><!-- --></p>
+<p>Now we need to get all the commands that we tried out earlier into this script. One option would be retype all the commands but that is an extremely tedious way of doing this. Instead, we can access all the previously executed code using the history tab as shown below and copy it over to the source file.</p>
+<p><img src="assets/ch_1-setup/gifs/history.gif" /><!-- --></p>
+<p>We don’t need the line that generated the error, so let’s remove that and save the file. I am calling it my_first_script. But you can call it anything you want.</p>
+<p><img src="assets/ch_1-setup/gifs/save_file.gif" /><!-- --></p>
+<p>The files tab in RStudio shows all your files and folders. Navigate to the folder you saved the script in to check if it is actually there.</p>
+<p><img src="assets/ch_1-setup/gifs/saved_file.gif" /><!-- --></p>
+</div>
+<div id="executing-a-script" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Executing a script</h2>
+<p>Once you have saved your file, you can run it as many times you would like without having to retype any of the commands. There are two ways you can do this. The first is by stepping through the script one line at a time using the run button.</p>
+<p><img src="assets/ch_1-setup/gifs/run_lines.gif" /><!-- --></p>
+<p>The second is by running the full script by sourcing the file. You can do this by clicking on the source button. Notice that the source command generates a new line in the history tab. This is the command that is used to source a file. Now we can close the script and paste this command from the history tab using the <code>To console</code> button and run it to execute all of the code within that script as shown below. Also notice how I use the broom 🧹 icon to clear the code in the console before sourcing the script.</p>
+<p><img src="assets/ch_1-setup/gifs/run_file.gif" /><!-- --></p>
+</div>
+<div id="rstudio-look-and-feel" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> RStudio look and feel</h2>
+<p>RStudio comes with tons of options to customize how it looks and feels. You can customize the different tabs, choose a different font, apply a darker theme etc. I personally like a dark theme, so I am going to switch over to that for the rest of this book.</p>
+<p><img src="assets/ch_1-setup/gifs/dark.gif" /><!-- --></p>
 
+</div>
 </div>
             </section>
 
