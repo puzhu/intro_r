@@ -3,7 +3,7 @@
 In this chapter, we will install R and RStudio and get familiar with executing some code.
 
 ## Install R
-Our very first step is to download and install R. The sequence below is current as of August 2021. [CRAN](https://cran.r-project.org/), which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could literally use any of the options here to download R.  On the next screen, pick the version of R that corresponds to your operating system and install it on your machine.
+Our very first step is to download and install R. The sequence below is current as of August 2021. [CRAN](https://cran.r-project.org/), which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could use any of the options here to download R.  On the next screen, pick the version that corresponds to your operating system and install it on your machine.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/download_r.gif")

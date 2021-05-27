@@ -7,10 +7,14 @@ run-commands-in-the-console
 dealing-with-errors
 saving-code
 executing-a-script
-literature
+rstudio-look-and-feel
+notebooks
+open-a-notebook
 methods
 applications
 example-one
 example-two
 final-words
-rstudio-look-and-feel
+the-anatomy-of-a-notebook
+preview
+the-basics

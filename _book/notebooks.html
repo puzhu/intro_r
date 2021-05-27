@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Notebooks | An illustrated introduction to R</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Notebooks | An illustrated introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Notebooks | An illustrated introduction to R" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Hari Subhash" />
+
+
+<meta name="date" content="2021-05-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="setup.html"/>
+<link rel="next" href="methods.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Pre-requisites</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Setup R and RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="setup.html"><a href="setup.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R</a></li>
+<li class="chapter" data-level="2.2" data-path="setup.html"><a href="setup.html#install-rstudio"><i class="fa fa-check"></i><b>2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="setup.html"><a href="setup.html#run-commands-in-the-console"><i class="fa fa-check"></i><b>2.3</b> Run commands in the console</a></li>
+<li class="chapter" data-level="2.4" data-path="setup.html"><a href="setup.html#dealing-with-errors"><i class="fa fa-check"></i><b>2.4</b> Dealing with errors</a></li>
+<li class="chapter" data-level="2.5" data-path="setup.html"><a href="setup.html#saving-code"><i class="fa fa-check"></i><b>2.5</b> Saving code</a></li>
+<li class="chapter" data-level="2.6" data-path="setup.html"><a href="setup.html#executing-a-script"><i class="fa fa-check"></i><b>2.6</b> Executing a script</a></li>
+<li class="chapter" data-level="2.7" data-path="setup.html"><a href="setup.html#rstudio-look-and-feel"><i class="fa fa-check"></i><b>2.7</b> RStudio look and feel</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="notebooks.html"><a href="notebooks.html"><i class="fa fa-check"></i><b>3</b> Notebooks</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="notebooks.html"><a href="notebooks.html#the-anatomy-of-a-notebook"><i class="fa fa-check"></i><b>3.1</b> The anatomy of a notebook</a></li>
+<li class="chapter" data-level="3.2" data-path="notebooks.html"><a href="notebooks.html#the-basics"><i class="fa fa-check"></i><b>3.2</b> The basics</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An illustrated introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="notebooks" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Notebooks</h1>
+<p>In the last chapter we wrote some code and saved it in an R Script file. Scripts are great for saving code that you would like to execute multiple number of times. They make it much easier to write and maintain code. But they have a limitation - they are not suited for interactively exploring data.</p>
+<p>A significant portion of data science projects are spent exploring and making sense of the data. This can often require weaving text together with the code and its output. You would also want to share your work with your colleagues and being able to think out aloud in your documents while also presenting the code and its outputs makes your work easy to understand and replicate. Scripts don’t allow us to do this effectively but notebooks do.</p>
+<p>“An R Notebook is an R Markdown document with code chunks that can be executed independently and interactively, with output visible immediately beneath the input” (<span class="citation"><a href="#ref-xie2019" role="doc-biblioref">Yihui Xie</a> (<a href="#ref-xie2019" role="doc-biblioref">2019</a>)</span>). This chapter will explore the basic features of notebooks and how to use them.</p>
+<div id="the-anatomy-of-a-notebook" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> The anatomy of a notebook</h2>
+<p>RStudio might ask you to install a few packages if this is the first time you are doing this. Go ahead and click yes.</p>
+<p><img src="assets/ch_2-notebooks/gifs/open_notebook.gif" /><!-- --></p>
+<p>As mentioned earlier, R notebooks are a type of R markdown document. This book for instance, is also written in R markdown and is a type of R markdown document. An R markdown document is composed of the following components.</p>
+<ol style="list-style-type: decimal">
+<li><strong>YAML</strong>: At the top, we have a YAML header. YAML stands for Yet Another Markup Language. YAML is used to set the metadata for a R markdown document. For instance, here it sets the title of the notebook and specifies that the output format is an <code>html_notebook</code>.
+The YAML portion of the document is identified by the three <code>---</code> at the top and bottom. You will not have to worry about YAML much in the beginning since RStudio conveniently pre-populates it when you open a new R markdown document. However, as you get along on your R journey, you will learn how to use this header section to customize the look and feel of your documents.</li>
+<li><strong>Markdown</strong>: The next piece of an R markdown document is markdown. Markdown is a text markup language. Markup is simply annotations next to text that instruct the editor to render the text a particular way. For instance, <code>##</code> next to some text would indicate that the particular line of text should be rendered as a type 2 heading. This is similar to what you would do in a word processor where you would use the drop down to select a particular heading type. The only difference being that in an editor like MS Word the changes are instantaneously visible to the person who is writing, while with markdown you will only be able to see the changes when you render.</li>
+<li><strong>Code</strong>: You can insert new chunks of code into your notebooks using <code>Ctrl + Alt + I</code> or <code>CMD + Opt + I</code> in Mac. Whilw we will be primarily using R code, you could insert chunks of code in other languages like Python, C++, SQL also.</li>
+</ol>
+<p><img src="assets/ch_2-notebooks/gifs/notebook_anatomy.gif" /><!-- --></p>
+</div>
+<div id="the-basics" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> The basics</h2>
+<p>Give the document a name, hit save and preview it.</p>
+<p><img src="assets/ch_2-notebooks/gifs/save_preview.gif" /><!-- --></p>
+<p>The preview immediately launches the notebook in a different window showing the text along with the code.</p>
+<p>Also notice, how the file section in R Studio now has two files. One that has the extension <code>.Rmd</code> indicating an R markdown file and another with the extension <code>.nb.html</code> indicating an HTML notebook, which is the output format that is in the YAML header.</p>
+<p><img src="assets/ch_2-notebooks/gifs/two_files.gif" /><!-- --></p>
+<p>Under the hood when you ‘knit’ an Rmarkdown notebook it is handed off to the package knitr (<span class="citation"><a href="#ref-R-knitr" role="doc-biblioref">Xie</a> (<a href="#ref-R-knitr" role="doc-biblioref">2020</a>)</span>), which executes all the code chunks and spins up an intermediate markdown document. This document is then sent to a open source converter called pandoc that converts the markdown document to the format that is set in the YAML header. (<span class="citation"><a href="#ref-hadley2017" role="doc-biblioref">Hadley Wickham</a> (<a href="#ref-hadley2017" role="doc-biblioref">2017</a>)</span>)</p>
+<p><img src="assets/ch_2-notebooks/gifs/first_preview.gif" /><!-- --></p>
+<p>The preview updates whenever we make any changes to the notebook and save it. Let’s see it in action. We can run a chunk of code by pressing the play button. This chunk of code generates a plot that is rendered below it. When we save the document and go back to the preview you will notice that it is automatically updated.</p>
+<p><img src="assets/ch_2-notebooks/gifs/preview_updates.gif" /><!-- --></p>
+<p>Let’s update some markdown text as well to see how that renders. I am going to create a type one header. The number of <code>#</code> indicate the level of a header in markdown. Once saved the preview will now show the title styled as type one heading.</p>
+<p><img src="assets/ch_2-notebooks/gifs/title_updates.gif" /><!-- --></p>
+<p>Let’s add some more text for fun.</p>
+<p><img src="assets/ch_2-notebooks/gifs/text_fun.gif" /><!-- --></p>
+<p>If you click on the preview dropdown, you will also notice all these other output formats that you could knit into. Try out the pdf option.</p>
+<p><img src="assets/ch_2-notebooks/gifs/pdf_doc.gif" /><!-- --></p>
+<p>Keep this <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">cheatsheet</a> as you use this book.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hadley2017" class="csl-entry">
+Hadley Wickham, Garrett Grolemund. 2017. <em>R for Data Science</em>. 1st ed. O’Reilly Media. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+</div>
+<div id="ref-R-knitr" class="csl-entry">
+Xie, Yihui. 2020. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://CRAN.R-project.org/package=knitr">https://CRAN.R-project.org/package=knitr</a>.
+</div>
+<div id="ref-xie2019" class="csl-entry">
+Yihui Xie, Garrett Grolemund, J. J. Allaire. 2019. <em>R Markdown: The Definitive Guide</em>. 1st ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["intro_r.pdf", "intro_r.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
