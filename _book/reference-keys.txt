@@ -1,5 +1,4 @@
 introduction
-pre-requisites
 setup
 install-r
 install-rstudio
@@ -9,12 +8,10 @@ saving-code
 executing-a-script
 rstudio-look-and-feel
 notebooks
-open-a-notebook
-methods
+the-anatomy-of-a-notebook
+the-basics
+introduction-to-functions
 applications
 example-one
 example-two
 final-words
-the-anatomy-of-a-notebook
-preview
-the-basics
