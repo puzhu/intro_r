@@ -11,8 +11,6 @@ description: "This is a minimal example of using the bookdown package to write a
 ---
 
 # Introduction
-
-Test
 This page currently holds my best practices and thoughts about while writing this book. This page eventually will be similar to other pages such as [Advanced R](https://adv-r.hadley.nz/). 
 
 **Rendering**
