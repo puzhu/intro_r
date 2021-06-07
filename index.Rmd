@@ -7,14 +7,14 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "An illustrated introduction to R for absolute beginners."
 ---
 
 # Introduction
 This page currently holds my best practices and thoughts about while writing this book. This page eventually will be similar to other pages such as [Advanced R](https://adv-r.hadley.nz/). 
 
 **Rendering**
-The current rendering style is pretty basic. However, once the book is completed, I will swith to a style similer to Advanced R. The output.yml from the advanced R book or try the Advanced R solutions.
+The current rendering style is pretty basic. However, once the book is completed, I will switch to a style similer to Advanced R. The output.yml from the advanced R book or try the Advanced R solutions.
 
 **Writing process**
 My current writing process with an emphasis on adding citations.
@@ -23,7 +23,6 @@ My current writing process with an emphasis on adding citations.
 2.  Capture all citations in zotero
 3.  Once the first draft of a chapter is complete, switch to the visual editor and use the [@6functi] syntax to add all the citations. 
 
-JK
 
 
 

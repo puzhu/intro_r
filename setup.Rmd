@@ -3,7 +3,6 @@
 In this chapter, we will install R and RStudio and get familiar with executing some code.
 
 ## Install R
-
 Our very first step is to download and install R. The sequence below is current as of August 2021. [CRAN](https://cran.r-project.org/), which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could use any of the options here to download R. On the next screen, pick the version that corresponds to your operating system and install it on your machine.
 
 ```{r echo=FALSE}
@@ -13,7 +12,6 @@ knitr::include_graphics("assets/ch_1-setup/gifs/download_r.gif")
 Once R is installed on your computer, your machine would be able to understand and execute any code that you write in R.
 
 ## Install RStudio
-
 R comes with a basic editor for writing code. But we won't use it in this book. Instead we will use RStudio.
 
 You can think of R Studio as a fully featured editor like Microsoft Word or Google docs, while the basic editor that ships with R is like the notepad or any other basic text editor. The community version of RStudio is free and packed with features that make our lives easier.

@@ -1,4 +1,4 @@
-# Introduction to Functions
+# Introduction to Functions {#functions-intro}
 
 In chapter \@ref(setup) section on [saving code] we saw how we could save a series of programming commands in a script and then source that script whenever we needed to execute the same sequence. This meant that we did not have to type out the commands again to execute the series of steps, instead, we could simply source the script to run the sequence of steps for us.
 
@@ -32,17 +32,18 @@ Let's start by turning on our computer and asking it to boil some water for the 
 
 First you need to get the kettle from your cupboard.This would involve going to the cupboard, opening it, and then pulling out the kettle from the cupboard and then closing the cupboard.
 
+
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_3-functions/gifs/cupboard_steps.gif")
 ```
 
-Next you will need to fill water in the kettle for a cup of tea. This involves going to the tap and filling enough water for a cup.
+Now we need to take the kettle to the tap and fill enough water for a cup.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_3-functions/gifs/fill_water.gif")
 ```
 
-Next let's give instruction to boil this water.
+Next let's give all the instructions to boil this water.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_3-functions/gifs/boil_water.gif")

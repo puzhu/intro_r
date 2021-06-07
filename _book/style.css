@@ -1,5 +1,5 @@
-/* 
-.book .book-header h1 {
+
+/* .book .book-header h1 {
   opacity: 1;
   text-align: left;
 }
@@ -13,11 +13,11 @@
 }
 #header h4.author em {
   font-style: normal;
-}
- */
+} */
+
 /* Sidebar formating --------------------------------------------*/
-/* 
-div.sidebar, div.base {
+
+/* div.sidebar, div.base {
   border: 1px solid #ccc;
   border-left-width: 5px;
   border-radius: 5px;
@@ -71,16 +71,17 @@ div.base::before,
 }
 .book .book-body .page-wrapper .page-inner section.normal pre {
   margin-bottom: 0;
-} */
+}
 
 /* Other gitbook tweaks -------------------------------------------------- */
-/* 
+/*
 .book .book-body .page-wrapper .page-inner section.normal code {
   padding: 2px 0;
-}
- */
+} */
+
 /* Custom Spans ---------------------------------------------------------- */
 /* see https://github.com/Tazinho/Advanced-R-Solutions/issues/162 */
+
 /* .Q {
   color: red;
   font-weight: bold;
@@ -96,12 +97,12 @@ div.base::before,
 .open {
   color: red;
   font-weight: bold;
-} */
+}  */
 
 /* ORIGINAL BELOW ---------------------------------------------------------- */
 
 
-p.caption {
+/p.caption {
   color: #777;
   margin-top: 10px;
 }
