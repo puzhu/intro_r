@@ -117,7 +117,7 @@
 
 \title{An illustrated introduction to R}
 \author{Hari Subhash}
-\date{2021-05-30}
+\date{2021-06-16}
 
 \begin{document}
 \maketitle
@@ -131,14 +131,10 @@
 
 This page currently holds my best practices and thoughts about while writing this book. This page eventually will be similar to other pages such as \href{https://adv-r.hadley.nz/}{Advanced R}.
 
-\hypertarget{rendering}{%
-\section{Rendering}\label{rendering}}
+\textbf{Rendering}
+The current rendering style is pretty basic. However, once the book is completed, I will switch to a style similer to Advanced R. The output.yml from the advanced R book or try the Advanced R solutions.
 
-The current rendering style is pretty basic. However, once the book is completed, I will swith to a style similer to Advanced R. The output.yml from the advanced R book or try the Advanced R solutions.
-
-\hypertarget{writing-process}{%
-\section{Writing process}\label{writing-process}}
-
+\textbf{Writing process}
 My current writing process with an emphasis on adding citations.
 
 \begin{enumerate}
@@ -152,12 +148,9 @@ My current writing process with an emphasis on adding citations.
   Once the first draft of a chapter is complete, switch to the visual editor and use the \citep{6functi} syntax to add all the citations.
 \end{enumerate}
 
-JK
-
 This book will introduce R\ldots{}
 
-\hypertarget{pre-requisites}{%
-\section{Pre-requisites}\label{pre-requisites}}
+Pre-requisites
 
 This book is meant for those with no familiarity with R. You don't need to know how to code have any familiarity with programming in general. The only pre-requisites are:
 
@@ -276,10 +269,99 @@ RStudio comes with tons of options to customize how it looks and feels. You can 
 
 \includegraphics{assets/ch_1-setup/gifs/dark.gif}
 
-\hypertarget{notebooks}{%
-\chapter{Notebooks}\label{notebooks}}
+\hypertarget{functions-intro}{%
+\chapter{Introduction to Functions}\label{functions-intro}}
 
-In the last chapter we wrote some code and saved it in an R Script file. Scripts are great for saving code that you would like to execute multiple number of times. They make it much easier to write and maintain code. But they have a limitation - they are not suited for interactively exploring data.
+In chapter \ref{setup} section on \protect\hyperlink{saving-code}{saving code} we saw how we could save a series of programming commands in a script and then source that script whenever we needed to execute the same sequence. This meant that we did not have to type out the commands again to execute the series of steps, instead, we could simply source the script to run the sequence of steps for us.
+
+Functions are a similar concept in programming but with the additional feature of being able to pass certain values as arguments that determine the nature of the output.
+
+For instance, consider the following function \texttt{sum(32,\ 15)}. \texttt{sum} is the name of the function and \texttt{32} and \texttt{15} are the arguments that were passed to the function. If we changed the values of the arguments to some other numbers then the output of the sum function would change accordingly.
+
+We'd similarly used the \texttt{print} function earlier with the argument \texttt{"Hello\ World"}. In programming terminology, whenever we use a function in our code it is referred to as being called with its arguments. Here we called the function print with the argument ``Hello World''.
+
+\includegraphics{assets/ch_3-functions/gifs/functions_syntax.gif}
+
+Functions are an extremely powerful tool for programming and have a lot of different benefits.
+
+Well named functions enhance the readability of your code by declaring to the reader what it is that you are doing. When a programmer uses functions like \texttt{sum} or \texttt{print}, the reader clearly understands what they are seeking to achieve. This is in contrast with a series of commands that implement the nitty-gritty details of adding two numbers or printing something to the console, which often are confusing to someone else who is not necessarily familiar with the logic behind the detailed steps.
+
+By encapsulating a series of steps in a function, you also reduce the likelihood errors that could occur if you had to copy and paste the same set of commands in different places in your code. Eliminating the need to copy paste commands also makes your code much easier to manage, since if you realize you have to modify a particular command you only have to do it within the function definition, whereas if you did not use a function, you would have to find all the places where that command appears and then change all those instances.
+
+\hypertarget{an-illustration}{%
+\section{An illustration}\label{an-illustration}}
+
+Let's explore why functions are useful and how to go about building them by teaching a computer to make tea. Imagine this computer is sending these instructions to a robot.
+
+Now, asking your computer to make tea is very different from say asking a friend of yours to make you tea.
+
+Your friend doesn't need step by step instructions to make tea. In fact your friend would probably think that you were crazy if you told them something like ``put the kettle on the stove and wait for the water to come to a boil and then open the cupboard to get a cup''. You would instead simply declare, make me some tea (please). Much like you declared print ``Hello World'' for me.
+
+Unlike your friend a computer needs very precise step by step instructions to make tea. So let's look at two ways to provide this instruction. One without functions and another using functions.
+
+Let's start by turning on our computer and asking it to boil some water for the tea.
+
+First you need to get the kettle from your cupboard.This would involve going to the cupboard, opening it, and then pulling out the kettle from the cupboard and then closing the cupboard.
+
+\includegraphics{assets/ch_3-functions/gifs/cupboard_steps.gif}
+
+Now we need to take the kettle to the tap and fill enough water for a cup.
+
+\includegraphics{assets/ch_3-functions/gifs/fill_water.gif}
+
+Next let's give all the instructions to boil this water.
+
+\includegraphics{assets/ch_3-functions/gifs/boil_water.gif}
+
+Now that we have boiling water, we need to go back to the cupboard to get a cup to pour the water into.
+
+\includegraphics{assets/ch_3-functions/gifs/get_cup.gif}
+
+Now, the only thing missing is a tea bag. Let's go back to the cupboard to fetch that as well.
+
+\includegraphics{assets/ch_3-functions/gifs/get_teabag.gif}
+
+Now we need to place the teabag in the cup and pour the water in.
+
+\includegraphics{assets/ch_3-functions/gifs/pour_water.gif}
+
+Enjoy your tea!
+
+\hypertarget{the-function-way}{%
+\section{The function way}\label{the-function-way}}
+
+Functions can be defined as follows \citep{function_def}
+
+\begin{quote}
+Functions are self contained modules of code that accomplish a specific task
+\end{quote}
+
+So how do we recognize when to use a function in our code???
+
+The biggest hint that you can get for using a function is when you notice yourself copying and pasting code from one part of your script or notebook to another. This is usually a signal to stop and consider if it is worth the effort to encapsulate that particular sequence into a function. For instance, in our series of steps for the computer, the sequence where we go to the cupboard to fetch something is repeated and can be replaced with a function.
+
+\includegraphics{assets/ch_3-functions/gifs/repetitions.gif}
+
+Let's create a function called get\_item that takes the item that we would like to get from the cupboard as its argument. Notice how in the function definition, for step 3, where the computer needs to take a particular item, we use \texttt{item\_name} instead of a specific item like a kettle or a cup as we did previously. This is the key design feature of functions that allows us to use it repeatedly with different parameters.
+
+\includegraphics{assets/ch_3-functions/gifs/get_item_fn.gif}
+
+Now we can replace all the repeated cupboard sequences with our \texttt{get\_item()} function. And instead of the item\_name, we use the name of the specific item that we would like to fetch from the cupboard and internally the function will replace item\_name with the name of the item that we pass as an argument for the function. So get\_item(``cup'') will fetch a cup from the cupboard.
+
+\includegraphics{assets/ch_3-functions/gifs/replace.gif}
+
+Now that we have replaced the repeated sections, we can clean up our code a little bit. The code is now much smaller and easier to understand.
+\includegraphics{assets/ch_3-functions/gifs/clean_code.gif}
+
+\hypertarget{more-functions}{%
+\section{More functions}\label{more-functions}}
+
+Now imagine if you were instead teaching the computer to cook. And making tea was one of the many other things that are included in this huge program. Some of the sequences in making tea, such as that for boiling water or putting an item into a vessel etc. are also likely to be repeated elsewhere. How would you write a function to encapsulate these actions?
+
+\hypertarget{the-magical-world-of-notebooks}{%
+\chapter{The magical world of notebooks}\label{the-magical-world-of-notebooks}}
+
+In \ref{setup} section on \protect\hyperlink{saving-code}{saving code} we wrote some code and saved it in an R Script file. Scripts are great for saving code that you would like to execute multiple number of times. They make it much easier to write and maintain code. But they have a limitation - they are not suited for interactively exploring data.
 
 A significant portion of data science projects are spent exploring and making sense of the data. This can often require weaving text together with the code and its output. You would also want to share your work with your colleagues and being able to think out aloud in your documents while also presenting the code and its outputs makes your work easy to understand and replicate. Scripts don't allow us to do this effectively but notebooks do.
 
@@ -342,42 +424,123 @@ If you click on the preview dropdown, you will also notice all these other outpu
 
 Keep this \href{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}{cheatsheet} as you use this book.
 
-\hypertarget{introduction-to-functions}{%
-\chapter{Introduction to Functions}\label{introduction-to-functions}}
+\hypertarget{packages}{%
+\chapter{Packages}\label{packages}}
 
-Functions are an extremely powerful tool for programming. My goal with this chapter is not to get you to write functions but to help you understand their purpose and to recognize them when you use them. For now, we will work with functions that have been written by others until we learn to write functions of our own.
+One of the biggest benefits of using an open source language like R is its robust package ecosystem. Now, if the only packages that you know of are the ones that get delivered by your mail person, then stick around. This chapter will cover how to install, use, uninstall and find packages. Let's start by understanding what packages are and why they are so great.
 
-Let's explore why functions are useful and how to go about building them by teaching a computer to make tea. Now, asking your computer to make tea is very different from say asking a friend of yours to make you tea.
+\hypertarget{what-is-a-package}{%
+\section{What is a package?}\label{what-is-a-package}}
 
-Your friend doesn't need step by step instructions to make tea. In fact tin your friend would probably think that you were crazy if you told them something like ``put the kettle on the stove and wait for the water to come to a boil and then open the cupboard to get a cup''.
+A package usually contains code, data and documentation.
 
-But a computer on the other hand needs every specific and precise step by step instructions to make tea. So let's look at two ways to provide this instruction. One without functions and another using functions.
+\includegraphics{assets/packages/gifs/package_open.gif}
 
-Let's start by turning on our computer and asking it to boil some water for the tea.
+The code part usually contains a set of functions that we can use in our work. In Chapter \ref{functions-intro}, we discussed how functions allow us to encapsulate a series of operations. This function can then be repeatedly called to execute the same sequence of steps. Packages contain a collection of such functions that have been written and tested by someone else.
 
-First you need to get the kettle from your cupboard.This would involve going to the cupboard, opening it, and then pulling out the kettle from the cupboard and then closing the cupboard.
+\includegraphics{assets/packages/gifs/package_fn.gif}
 
-Next you will need to fill water in the kettle for a cup of tea. This involves going to the tap and filling enough water for a cup.
+\hypertarget{why-are-packages-useful}{%
+\section{Why are packages useful?}\label{why-are-packages-useful}}
 
-Next let's give instruction to boil this water.
+Packages, can save us a tremendous amount of time and effort when conducting data analysis. Let's see how.
 
-Place kettle on stove.
+Imagine you are researching software stocks to invest in. You specifically want to examine past trends in price movement to predict the future.
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\includegraphics{assets/packages/gifs/stock_qstn.gif}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+To do this research, you will first need to download historical price data for different stocks from a website or service like Yahoo Finance or Morningstar.
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\includegraphics{assets/packages/gifs/extract.gif}
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+Often, the downloaded data has errors, might be incomplete, and in a shape that is not suited for the analysis that you want to perform. So the first task is usually to tidy this data so that it is in a format that you can use. For instance, in the case shown below I transform the data from a wide format with stock names as columns to a long format where the stocks are represented as rows. There is a lot more to tidying data, which we will cover in chapter \ref{tidy-data}.
 
-\hypertarget{final-words}{%
-\chapter{Final Words}\label{final-words}}
+\includegraphics{assets/packages/gifs/tidy.gif}
 
-We have finished a nice book.
+The actual work that draws meaningful insight from the data often happens in an iterative manner. Very rarely do we find our answers in the first try and it often requires a series of steps that combine visualization, analysis and modeling and further transformations of the data till we can draw conclusions.
+
+\includegraphics{assets/packages/gifs/make_sense.gif}
+
+Once we have some conclusions that we can share, we can communicate these results. In a collaborative setting you would also need to communicate intermediate results with your research partner(s). So in these settings, communication can also be wrapped into the earlier iterative process of making sense of the data.
+
+\includegraphics{assets/packages/gifs/communicate.gif}
+
+Packages help simplify all of these steps. Most tasks and problems that you encounter in your analysis are likely to have already been resolved in a different setting by someone else. For instance, consider the task of getting data from Yahoo Finance, someone else has probably done this using R before. Packages are a way to bundle these solutions along with some documentation so that you don't have to reinvent the wheel when solving the same problems again.
+
+For example, in our case, the \href{https://business-science.github.io/tidyquant/}{tidyquant} package contains a lot of functions for financial analysis. These can be used to directly download data from Yahoo Finance (or other sources), run popular financial models and visualize them. Similarly, other packages such as tidyr, ggplot, dplyr etc. provide general purpose tools and frameworks that can be applied to any data analysis project. And finally, packages like Rmarkdown and knitr make it really easy to communicate your results in a compelling manner in a wide variety of formats.
+
+\includegraphics{assets/packages/gifs/package_use.gif}
+
+In a world without packages, you would need to write all the code needed to perform every step of your analysis. This would mean, code to download the stock data, clean it up, custom code to create financial models that you want to use, code for the analysis itself, and generating the charts and tables to include in a report or presentation to communicate the results.
+
+The bulk of your intellectual work should be on analyzing whether a stock is a good investment or not i.e.~making sense of the data. And packages free up your time by giving you well tested and effective solutions for tasks that are tangential to this purpose so that you can spend all your time on tasks that matter.
+
+\hypertarget{package-repositories}{%
+\section{Package Repositories}\label{package-repositories}}
+
+Before we install a package, let's understand how they are maintained. When someone writes a package, they would need to host somewhere on the internet so that others can access the package to install it. The place that a package is hosted is called a repository. So when we issue a command on our computer to install a particular package, the relevant package is retrieved from this repository and installed on our computer.
+
+\includegraphics{assets/packages/gifs/repo_concept.gif}
+
+There are three main sources for r packages. The first and biggest one is the Comprehensive R Archive Network or CRAN. There are about 17500 packages on CRAN right now. The next one is called Bioconductor which specifically provides tools and packages for genomic data and analysis. The final category of packages are hosted independently with the most common choice being github which is a repository for code.
+
+Packages that are hosted on CRAN or on BioConductor have requirements about testing and maintenance that ensures the quality of the code. These requirements do not exist for packages that are hosted independently on platforms like Github.
+
+CRAN and Bioconductor require package developers to maintain their packages and pass certain quality checks. Packages that are not maintained are periodically removed from these repositories. Independently hosted packages such as those on Github on the other hand do not have to pass any sort of checks. Package developers often use github to release the most latest versions of their packages on Github before moving them to repositories like CRAN.
+
+\includegraphics{assets/packages/gifs/3_repos.gif}
+
+Most of the packages that we will use are hosted on CRAN (unless your work is on Genomics). It is also often the case that packages that are hosted on CRAN are also available on GitHub. These usually tend to be the most recent version of a particular package that has not fully tested but might include newer functions that are not in the previous version that is on CRAN.
+
+\includegraphics{assets/packages/gifs/repo_last.gif}
+
+\hypertarget{install-a-package}{%
+\section{Install a package}\label{install-a-package}}
+
+Our first installation will be the \texttt{cowsay} package. This is a pretty whimsical package that prints a particular animal saying a phrase that you specify. In the code below, I am using the function \texttt{say()} from the \texttt{cowsay} package with the arguments ``R can be pretty silly'' and cat. This is printed out as shown below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(cowsay)}
+\FunctionTok{say}\NormalTok{(}\AttributeTok{what =} \StringTok{"R can be pretty silly"}\NormalTok{, }\AttributeTok{by =} \StringTok{"cat"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  -------------- 
+## R can be pretty silly 
+##  --------------
+##     \
+##       \
+##         \
+##             |\___/|
+##           ==) ^Y^ (==
+##             \  ^  /
+##              )=*=(
+##             /     \
+##             |     |
+##            /| | | |\
+##            \| | |_|/\
+##       jgs  //_// ___/
+##                \_)
+## 
+\end{verbatim}
+
+At the very minimum, packages that are published on CRAN must include an online reference that is in the pdf format. In a lot of cases, the package authors also provide additional reference websites and guides. In fact, the another package called \href{https://pkgdown.r-lib.org/}{\texttt{pkgdown}} provides tools and functions that make it really easy to build websites for packages. The \texttt{cowsay} package has a website that is built using \texttt{pkgdown}. You can access it \href{https://sckott.github.io/cowsay/}{here}.
+
+\includegraphics{assets/packages/gifs/cowsay_scroll.gif}
+
+Typically, the instructions to install a package are provided in the reference.
+
+\includegraphics{assets/packages/gifs/install_box.gif}
+
+As you can see, there are two suggested installation methods. The first is the version that is available on CRAN and the second is the newer development version from a repository on Github.
+
+\hypertarget{tidy-data}{%
+\chapter{Tidying Data}\label{tidy-data}}
+
+TBD
 
   \bibliography{book.bib,packages.bib}
 

@@ -17,5 +17,9 @@ the-basics
 packages
 what-is-a-package
 why-are-packages-useful
-installing-packages
-tidy_data
+package-repositories
+package-documentation
+install-cowsay-package
+remove-a-package
+install-a-package-from-github
+tidy-data
