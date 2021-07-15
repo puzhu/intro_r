@@ -24,7 +24,7 @@
 <meta name="author" content="Hari Subhash" />
 
 
-<meta name="date" content="2021-06-21" />
+<meta name="date" content="2021-07-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="the-magical-world-of-notebooks.html"/>
 <link rel="next" href="tidy-data.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -233,8 +255,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="package-documentation" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Package documentation</h2>
 <p>Our first installation will be the <code>cowsay</code> package. This is a pretty whimsical package that prints a particular animal saying a phrase that you specify. In the code below, I am using the function <code>say()</code> from the <code>cowsay</code> package with the arguments “R can be pretty silly” and cat. This is printed out as shown below.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="packages.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowsay)</span>
-<span id="cb1-2"><a href="packages.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="at">what =</span> <span class="st">&quot;R can be pretty silly&quot;</span>, <span class="at">by =</span> <span class="st">&quot;cat&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="packages.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowsay)</span>
+<span id="cb3-2"><a href="packages.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="at">what =</span> <span class="st">&quot;R can be pretty silly&quot;</span>, <span class="at">by =</span> <span class="st">&quot;cat&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  -------------- 
 ## R can be pretty silly 
@@ -267,7 +289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="install-cowsay-package" class="section level2" number="5.5">
 <h2><span class="header-section-number">5.5</span> Install cowsay package</h2>
 <p>Type in the command below in your console (don’t forget the quotes) and press Enter. This will install the cowsay package along with its dependencies.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="packages.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowsay&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="packages.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowsay&quot;</span>)</span></code></pre></div>
 <p>The <code>install.packages</code> command is a function that is provided with R. When we provide it with the argument that specifies the name of the package it searches CRAN for this package and then downloads it onto our computer.</p>
 <p><img src="assets/packages/gifs/install_command.gif" /><!-- --></p>
 <p>The packages tab on RStudio shows the list of all the installed packages on your computer.</p>
@@ -277,7 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Notice how the check box is unchecked. This indicates that the package has not been loaded yet for the current RStudio session. This means that you will not be able to directly use or refer to the functions or other items in this package right now. If we clear the search you will see the entire list of packages. Notice how some of them are already checked. These are the packages that are pre-loaded for every session of R. For instance, we were able to use the <code>print()</code> function earlier since it belongs to the base package that is pre-loaded.</p>
 <p><img src="assets/packages/gifs/packages_checked.gif" /><!-- --></p>
 <p>We can load a package using the <code>library()</code> function. Copy the command below and run it in your console.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="packages.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;cowsay&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="packages.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;cowsay&quot;</span>)</span></code></pre></div>
 <p>Once loaded use the <code>say()</code> function to print any message you like as shown below. By default, the <code>say()</code> function uses a cat as the animal that say’s the phrase.
 <img src="assets/packages/gifs/howdy.gif" /><!-- --></p>
 <p>We can use the <code>by</code> argument in the function to change this to a cow (or any other supported animals).
@@ -288,7 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="remove-a-package" class="section level2" number="5.6">
 <h2><span class="header-section-number">5.6</span> Remove a package</h2>
 <p>We can remove a package using the <code>remove.packages()</code> command.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="packages.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">remove.packages</span>(<span class="st">&quot;cowsay&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="packages.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">remove.packages</span>(<span class="st">&quot;cowsay&quot;</span>)</span></code></pre></div>
 <p><img src="assets/packages/gifs/remove_package.gif" /><!-- --></p>
 <p><code>remove.packages()</code> however, will only remove the package that is specified and will not remove any of the dependencies. For instance, the fortunes package that was installed along with cowsay will still be available after removing cowsay.</p>
 <p><img src="assets/packages/gifs/dependency_not.gif" /><!-- --></p>

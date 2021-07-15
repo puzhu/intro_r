@@ -9,30 +9,16 @@ biblio-style: apalike
 link-citations: yes
 description: "An illustrated introduction to R for absolute beginners."
 ---
-
 # Introduction
-This page currently holds my best practices and thoughts about while writing this book. This page eventually will be similar to other pages such as [Advanced R](https://adv-r.hadley.nz/). 
 
-**Rendering**
-The current rendering style is pretty basic. However, once the book is completed, I will switch to a style similer to Advanced R. The output.yml from the advanced R book or try the Advanced R solutions.
-
-**Writing process**
-My current writing process with an emphasis on adding citations.
-
-1.  Write using markdown first. Note in plain text the citations.
-2.  Capture all citations in zotero
-3.  Once the first draft of a chapter is complete, switch to the visual editor and use the [@6functi] syntax to add all the citations. 
-
-
-
+This book is a work in progress. When complete, it is meant to be a gentle illustrated introduction to R
 
 This book will introduce R...
 
-Pre-requisites
+## Pre-requisites
 
 This book is meant for those with no familiarity with R. You don't need to know how to code have any familiarity with programming in general. The only pre-requisites are:
 
 1.  Some familiarity with computers for basic tasks like installing new software.
 2.  Commitment towards trying things on your own (even when it gets hard).
 
-I want to stress the second point. This will book will try to make things really easy and intuitive. But there will be times when you encounter an error or issue that is not covered here. You should reach out on the community discord channel or
