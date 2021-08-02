@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Setup R and RStudio | An illustrated introduction to R</title>
-  <meta name="description" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R for absolute beginners." />
+  <title>Chapter 2 Get setup | An illustrated introduction to R</title>
+  <meta name="description" content="Chapter 2 Get setup | An illustrated introduction to R for absolute beginners." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R" />
+  <meta property="og:title" content="Chapter 2 Get setup | An illustrated introduction to R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R for absolute beginners." />
+  <meta property="og:description" content="Chapter 2 Get setup | An illustrated introduction to R for absolute beginners." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R" />
+  <meta name="twitter:title" content="Chapter 2 Get setup | An illustrated introduction to R" />
   
-  <meta name="twitter:description" content="Chapter 2 Setup R and RStudio | An illustrated introduction to R for absolute beginners." />
+  <meta name="twitter:description" content="Chapter 2 Get setup | An illustrated introduction to R for absolute beginners." />
   
 
 <meta name="author" content="Hari Subhash" />
 
 
-<meta name="date" content="2021-07-14" />
+<meta name="date" content="2021-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="functions-intro.html"/>
+<link rel="next" href="r-basics.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -120,28 +120,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -159,39 +137,50 @@ div.csl-indent {
 <li><a href="./">An illustrated introduction to R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Setup R and RStudio</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#pre-requisites"><i class="fa fa-check"></i><b>1.1</b> Pre-requisites</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Get setup</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="setup.html"><a href="setup.html#install-r"><i class="fa fa-check"></i><b>2.1</b> Install R</a></li>
-<li class="chapter" data-level="2.2" data-path="setup.html"><a href="setup.html#install-rstudio"><i class="fa fa-check"></i><b>2.2</b> Install RStudio</a></li>
-<li class="chapter" data-level="2.3" data-path="setup.html"><a href="setup.html#run-commands-in-the-console"><i class="fa fa-check"></i><b>2.3</b> Run commands in the console</a></li>
+<li class="chapter" data-level="2.2" data-path="setup.html"><a href="setup.html#drive-a-ferarri"><i class="fa fa-check"></i><b>2.2</b> Drive a Ferarri</a></li>
+<li class="chapter" data-level="2.3" data-path="setup.html"><a href="setup.html#console"><i class="fa fa-check"></i><b>2.3</b> Meet the console - a glorified calculator</a></li>
 <li class="chapter" data-level="2.4" data-path="setup.html"><a href="setup.html#dealing-with-errors"><i class="fa fa-check"></i><b>2.4</b> Dealing with errors</a></li>
 <li class="chapter" data-level="2.5" data-path="setup.html"><a href="setup.html#saving-code"><i class="fa fa-check"></i><b>2.5</b> Saving code</a></li>
 <li class="chapter" data-level="2.6" data-path="setup.html"><a href="setup.html#executing-a-script"><i class="fa fa-check"></i><b>2.6</b> Executing a script</a></li>
 <li class="chapter" data-level="2.7" data-path="setup.html"><a href="setup.html#rstudio-look-and-feel"><i class="fa fa-check"></i><b>2.7</b> RStudio look and feel</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="functions-intro.html"><a href="functions-intro.html"><i class="fa fa-check"></i><b>3</b> Introduction to Functions</a>
+<li class="chapter" data-level="2.8" data-path="setup.html"><a href="setup.html#the-magical-world-of-notebooks"><i class="fa fa-check"></i><b>2.8</b> The magical world of notebooks</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="functions-intro.html"><a href="functions-intro.html#an-illustration"><i class="fa fa-check"></i><b>3.1</b> An illustration</a></li>
-<li class="chapter" data-level="3.2" data-path="functions-intro.html"><a href="functions-intro.html#the-function-way"><i class="fa fa-check"></i><b>3.2</b> The function way</a></li>
-<li class="chapter" data-level="3.3" data-path="functions-intro.html"><a href="functions-intro.html#more-functions"><i class="fa fa-check"></i><b>3.3</b> More functions</a></li>
+<li class="chapter" data-level="2.8.1" data-path="setup.html"><a href="setup.html#anatomy-of-an-r-markdown-document"><i class="fa fa-check"></i><b>2.8.1</b> Anatomy of an R markdown document</a></li>
+<li class="chapter" data-level="2.8.2" data-path="setup.html"><a href="setup.html#working-with-a-notebook"><i class="fa fa-check"></i><b>2.8.2</b> Working with a notebook</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="the-magical-world-of-notebooks.html"><a href="the-magical-world-of-notebooks.html"><i class="fa fa-check"></i><b>4</b> The magical world of notebooks</a>
+<li class="chapter" data-level="2.9" data-path="setup.html"><a href="setup.html#exercise"><i class="fa fa-check"></i><b>2.9</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>3</b> R basics</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="the-magical-world-of-notebooks.html"><a href="the-magical-world-of-notebooks.html#the-anatomy-of-a-notebook"><i class="fa fa-check"></i><b>4.1</b> The anatomy of a notebook</a></li>
-<li class="chapter" data-level="4.2" data-path="the-magical-world-of-notebooks.html"><a href="the-magical-world-of-notebooks.html#the-basics"><i class="fa fa-check"></i><b>4.2</b> The basics</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>5</b> Packages</a>
+<li class="chapter" data-level="3.1" data-path="r-basics.html"><a href="r-basics.html#variables"><i class="fa fa-check"></i><b>3.1</b> Variables</a></li>
+<li class="chapter" data-level="3.2" data-path="r-basics.html"><a href="r-basics.html#data-types"><i class="fa fa-check"></i><b>3.2</b> Data types</a></li>
+<li class="chapter" data-level="3.3" data-path="r-basics.html"><a href="r-basics.html#functions"><i class="fa fa-check"></i><b>3.3</b> Functions</a></li>
+<li class="chapter" data-level="3.4" data-path="r-basics.html"><a href="r-basics.html#packages"><i class="fa fa-check"></i><b>3.4</b> Packages</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="packages.html"><a href="packages.html#what-is-a-package"><i class="fa fa-check"></i><b>5.1</b> What is a package?</a></li>
-<li class="chapter" data-level="5.2" data-path="packages.html"><a href="packages.html#why-are-packages-useful"><i class="fa fa-check"></i><b>5.2</b> Why are packages useful?</a></li>
-<li class="chapter" data-level="5.3" data-path="packages.html"><a href="packages.html#package-repositories"><i class="fa fa-check"></i><b>5.3</b> Package Repositories</a></li>
-<li class="chapter" data-level="5.4" data-path="packages.html"><a href="packages.html#package-documentation"><i class="fa fa-check"></i><b>5.4</b> Package documentation</a></li>
-<li class="chapter" data-level="5.5" data-path="packages.html"><a href="packages.html#install-cowsay-package"><i class="fa fa-check"></i><b>5.5</b> Install cowsay package</a></li>
-<li class="chapter" data-level="5.6" data-path="packages.html"><a href="packages.html#remove-a-package"><i class="fa fa-check"></i><b>5.6</b> Remove a package</a></li>
-<li class="chapter" data-level="5.7" data-path="packages.html"><a href="packages.html#install-a-package-from-github"><i class="fa fa-check"></i><b>5.7</b> Install a package from GitHub</a></li>
+<li class="chapter" data-level="3.4.1" data-path="r-basics.html"><a href="r-basics.html#install-the-tidyverse-package"><i class="fa fa-check"></i><b>3.4.1</b> Install the tidyverse package</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="tidy-data.html"><a href="tidy-data.html"><i class="fa fa-check"></i><b>6</b> Tidying Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tidy-data.html"><a href="tidy-data.html"><i class="fa fa-check"></i><b>4</b> Tidying Data</a></li>
+<li class="chapter" data-level="5" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>5</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="appendix.html"><a href="appendix.html#packages-1"><i class="fa fa-check"></i><b>5.1</b> Packages</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="appendix.html"><a href="appendix.html#what-is-a-package"><i class="fa fa-check"></i><b>5.1.1</b> What is a package?</a></li>
+<li class="chapter" data-level="5.1.2" data-path="appendix.html"><a href="appendix.html#why-are-packages-useful"><i class="fa fa-check"></i><b>5.1.2</b> Why are packages useful?</a></li>
+<li class="chapter" data-level="5.1.3" data-path="appendix.html"><a href="appendix.html#package-repositories"><i class="fa fa-check"></i><b>5.1.3</b> Package Repositories</a></li>
+<li class="chapter" data-level="5.1.4" data-path="appendix.html"><a href="appendix.html#package-documentation"><i class="fa fa-check"></i><b>5.1.4</b> Package documentation</a></li>
+<li class="chapter" data-level="5.1.5" data-path="appendix.html"><a href="appendix.html#install-cowsay-package"><i class="fa fa-check"></i><b>5.1.5</b> Install cowsay package</a></li>
+<li class="chapter" data-level="5.1.6" data-path="appendix.html"><a href="appendix.html#remove-a-package"><i class="fa fa-check"></i><b>5.1.6</b> Remove a package</a></li>
+<li class="chapter" data-level="5.1.7" data-path="appendix.html"><a href="appendix.html#install-a-package-from-github"><i class="fa fa-check"></i><b>5.1.7</b> Install a package from GitHub</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -213,47 +202,53 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="setup" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Setup R and RStudio</h1>
+<h1><span class="header-section-number">Chapter 2</span> Get setup</h1>
 <p>In this chapter, we will install R and RStudio and get familiar with executing some code.</p>
 <div id="install-r" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Install R</h2>
-<p>Our very first step is to download and install R. The sequence below is current as of August 2021. <a href="https://cran.r-project.org/">CRAN</a>, which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could use any of the options here to download R. On the next screen, pick the version that corresponds to your operating system and install it on your machine.</p>
-<p><img src="assets/ch_1-setup/gifs/download_r.gif" /><!-- --></p>
-<p>Once R is installed on your computer, your machine would be able to understand and execute any code that you write in R.</p>
+<p><img src="assets/ch_1-setup/gifs/translator.gif" style="float:right; padding:10px" /></p>
+<p>Our very first step is to download and install R from <a href="https://cran.r-project.org/">CRAN</a> - a repository for R. Download and install the version of R that corresponds to your operating system.</p>
+<p>You can think of R as an interpreter between you and your computer. Once R is installed, you can write instructions using the R programming language, which are then translated by R into a language that your computer will understand.</p>
+<p>In the real world, using an interpreter is only possible if you speak a language that they understand. The same goes here. Our job as programmers is to write R programs that communicate clearly and without error so that these instructions can be translated effectively and relayed to the computer. In the next step we will install RStudio which is a tool that makes this task easy.</p>
 </div>
-<div id="install-rstudio" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Install RStudio</h2>
-<p>R comes with a basic editor for writing code. But we won’t use it in this book. Instead we will use RStudio.</p>
-<p>You can think of R Studio as a fully featured editor like Microsoft Word or Google docs, while the basic editor that ships with R is like the notepad or any other basic text editor. The community version of RStudio is free and packed with features that make our lives easier.</p>
+<div id="drive-a-ferarri" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Drive a Ferarri</h2>
+<p>In theory, you could use any text editor (like Notepad or MS Word) to write R programs. But this would be like using a kitchen knife to perform a surgery. It might get the job done, but it won’t be easy or pretty.</p>
+<p>When you install R on your system, it also installs a code editor that can be used to write R programs. While this is a more appropriate tool than a text editor it is a bit basic. What we need is a Ferrari - a feature rich code editor that is built to write and manage R programs. This is what RStudio offers.</p>
+<p>RStudio is free and packed with features that make writing code in R a breeze. It also comes with a lot of other convenient features that make it really easy to manage R projects and publish your work.</p>
 <!-- ```{r echo=FALSE} -->
 <!-- knitr::include_graphics("assets/ch_1-setup/images/editor_compare.png") -->
 <!-- ``` -->
 <p>You can download RStudio from the following <a href="https://www.rstudio.com/products/rstudio/download/#download">link</a>. Once you have R Studio installed, open it up to write your first few lines of code.</p>
 </div>
-<div id="run-commands-in-the-console" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Run commands in the console</h2>
+<div id="console" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Meet the console - a glorified calculator</h2>
 <p>Let’s print(“hello world”) as our first command.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="setup.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</span></code></pre></div>
-<p>The right angle bracket with blinking cursor shows the place where we can enter commands. You should follow along with the next sequence of steps so that you get familiar with typing commands in R.</p>
+<p>The right angle bracket <code>&gt;</code> with blinking cursor shows the place where we can enter commands. You should follow along with the next sequence of steps so that you get familiar with typing commands in R.</p>
 <p><img src="assets/ch_1-setup/gifs/hello_world.gif" /><!-- --></p>
-<p>Let’s try out a few basic arithmetic operations. Enter the arithmetic as shown below one line at a time.</p>
+<p>Let’s try out a few basic arithmetic operations. Enter the arithmetic as shown below <strong>one line at a time</strong>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="setup.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span>
 <span id="cb2-2"><a href="setup.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">320</span> <span class="sc">*</span> <span class="dv">987</span></span>
 <span id="cb2-3"><a href="setup.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">12</span></span></code></pre></div>
-<p>You can think of the R console as a calculator on steroids. Similar to the calculator it allows us to enter commands and it prints the results of those below the command.</p>
+<p>The pane in RStudio that we are currently using is called the console. You can think of the R console as a calculator on steroids. Similar to the calculator it allows us to enter commands and it prints the results of those below the command.</p>
 <p><img src="assets/ch_1-setup/gifs/console.gif" /><!-- --></p>
 </div>
 <div id="dealing-with-errors" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Dealing with errors</h2>
-<p>Computers, unlike humans are extremely finicky and precise about language. While humans can infer meaning from jumbled up words or incomplete sentences; computers will protest and complain even if a period is not where it is supposed to be. This means that at some point we will invariably type in something that yields an error. When that happens R will return an error message like the one shown below that indicates why there was an issue with executing a particular line of code.</p>
+<p>Computers, unlike humans are finicky and precise about language. We can infer meaning from jumbld up wrds or incomplete senteces; while a computer will protest and complain even if a period is not where it is supposed to be. Think about them as an interpreter who will refuse to translate what you said if you did not use the correct grammar.
+This means that at some point we will invariably type in something that yields an error. When that happens R will return an error message like the one shown below that indicates why there was an issue with executing a particular line of code.</p>
 <p><img src="assets/ch_1-setup/gifs/an_error.gif" /><!-- --></p>
-<p>Errors can be frustrating experience if you are new to coding. You might not immediately be able to tell why an error occurred and the error message from R can often seem very cryptic.</p>
-<p>Errors, however, are a part and parcel of programming. And a big component of your journey as a new programmer will be to learn how to understand and resolve them. The first and often best strategy is to copy paste the error message and search on google to see if others have resolved the same error with someone else. Initially even these solutions like those on forums like <a href="https://stackoverflow.com/questions/14469486/r-issue-object-not-found">stackoverflow</a> might seem hard to decipher and understand. But, eventually you will get to a point where you are not as flustered when you encounter them and have enough knowledge, tools and strategies in your arsenal to troubleshoot effectively. You might even come to enjoy the puzzle solving learning experience that an odd error brings 😄.</p>
-<p>I will deliberately introduce several errors as we go through this book to get us familiarized with them and teach you how to go about resolving them.</p>
+<p>Errors can be frustrating if you are new to coding. They are often cryptic and you might not be able to resolve them immediately.</p>
+<p>But that is OK. Errors, are a part and parcel of programming. And resolving them is a key programming skill. So when you get an error, take a deep breath and remember that this is an opportunity to learn something new.</p>
+<p><img src="assets/ch_1-setup/gifs/technobabble.gif" style="float:right; padding:10px" /></p>
+<p>Often the best strategy to find a solution is to search for the error online to see if others have resolved it with someone else’s help. Initially even these <a href="https://stackoverflow.com/questions/14469486/r-issue-object-not-found">solutions</a> will seem like incoherent technobabble.</p>
+<p>And right now, you might simply copy paste these solutions and move on, but, with practice and patience you will learn to troubleshoot effectively and learn from these errors. And hey, you might even come to enjoy the puzzle solving experience that an odd error brings. :smile:</p>
 </div>
 <div id="saving-code" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Saving code</h2>
-<p>So far, we have typed commands into the console. But you will notice that there is no option to save the code that we have typed into the console. Most projects would require files that can be saved so that we can work on them over a period of time and execute them a multiple times without having to type them out each time.</p>
+<p>So far, we have typed commands into the console. But you will notice that there is no option to save the code that we have typed into the console.</p>
+<p>Most projects would require files that can be saved so that we can work on them over a period of time and execute them a multiple times without having to type them out each time.</p>
 <p>We can do this by placing code inside a file. There are many different types of files but, for now let’s start with a simple R script.</p>
 <p><img src="assets/ch_1-setup/gifs/new_file.gif" /><!-- --></p>
 <p>Now we need to get all the commands that we tried out earlier into this script. One option would be retype all the commands but that is an extremely tedious way of doing this. Instead, we can access all the previously executed code using the history tab as shown below and copy it over to the source file.</p>
@@ -267,13 +262,58 @@ div.csl-indent {
 <h2><span class="header-section-number">2.6</span> Executing a script</h2>
 <p>Once you have saved your file, you can run it as many times you would like without having to retype any of the commands. There are two ways you can do this. The first is by stepping through the script one line at a time using the run button.</p>
 <p><img src="assets/ch_1-setup/gifs/run_lines.gif" /><!-- --></p>
-<p>The second is by running the full script by sourcing the file. You can do this by clicking on the source button. Notice that the source command generates a new line in the history tab. This is the command that is used to source a file. Now we can close the script and paste this command from the history tab using the <code>To console</code> button and run it to execute all of the code within that script as shown below. Also notice how I use the broom 🧹 icon to clear the code in the console before sourcing the script.</p>
+<p>The second is by running the full script by sourcing the file. Click on the dropdown instead of the button itself. You have two options - source with echo or the default source (you can ignore the third option for now). Echo, simply means to print outputs on to the console. The default option of Source will run all the lines of the code without printing anything to the console. Use the Source with echo option for this exercise.</p>
+<p>Notice that the source command generates a new line in the history tab. This is the command that is used to source a file. Now we can close the script and paste this command from the history tab using the <code>To console</code> button and run it to execute all of the code within that script as shown below. Also notice how I use the broom 🧹 icon to clear the code in the console before sourcing the script.</p>
 <p><img src="assets/ch_1-setup/gifs/run_file.gif" /><!-- --></p>
 </div>
 <div id="rstudio-look-and-feel" class="section level2" number="2.7">
 <h2><span class="header-section-number">2.7</span> RStudio look and feel</h2>
 <p>RStudio comes with tons of options to customize how it looks and feels. You can customize the different tabs, choose a different font, apply a darker theme etc. I personally like a dark theme, so I am going to switch over to that for the rest of this book.</p>
 <p><img src="assets/ch_1-setup/gifs/dark.gif" /><!-- --></p>
+<p>Play around with the options here to find a look that you like.</p>
+</div>
+<div id="the-magical-world-of-notebooks" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> The magical world of notebooks</h2>
+<p>Scripts make it easier to write and maintain code and are great for storing code that you would like to execute multiple times. But they have a limitation - they are not suited for interactively exploring data.</p>
+<p>A significant portion of data science projects are spent exploring and making sense of the data. This can often require weaving text together with the code and its output. You would also want to share your work with your colleagues and being able to think out aloud in your documents while also presenting the code and its outputs makes your work easy to understand and replicate. Scripts don’t allow us to do this effectively but notebooks do.</p>
+<p>R notebooks are built using R markdown. R markdown is an extremely versatile format that can be used to create all kinds of outputs like books, websites, presentations, word documents etc. This book is written using R markdown.</p>
+<p>Let’s create a notebook using the same drop down menu as that for script. The notebook opens with some dummy text that is a good template to get started.</p>
+<p><img src="assets/ch_1-setup/gifs/open_notebook.gif" /><!-- --></p>
+<div id="anatomy-of-an-r-markdown-document" class="section level3" number="2.8.1">
+<h3><span class="header-section-number">2.8.1</span> Anatomy of an R markdown document</h3>
+<p>An R markdown document is typically composed of the following components.</p>
+<ol style="list-style-type: decimal">
+<li><strong>YAML</strong>: At the top, we have a YAML (Yet Another Markup Language) header that is identified by the three <code>---</code> at the top and bottom. YAML is used to set the metadata for a R markdown document. For instance, in the document we just opened it sets the title of the notebook and specifies that the output format is an <code>html_notebook</code>. There are several other options that can be specified in the header that will determine the output format (pdf, word, book, presentation etc), the design, date of publishing etc. But for now let’s keep things simple and leave everything as is.</li>
+<li><strong>Markdown</strong>: Markdown is a text markup language. Markup is simply annotations next to text that instruct the editor to render the text a particular way. For instance, <code>##</code> next to some text would indicate that the particular line of text should be rendered as a type 2 heading. This is similar to what you would do in a word processor where you would use the drop down to select a particular heading type. The only difference being that in an editor like MS Word the changes are instantaneously visible to the person who is writing, while with markdown you will only be able to see the changes when you ‘knit’ the document. We will see how to do that shortly.</li>
+<li><strong>Code</strong>: You can insert new chunks of code into your notebooks using <code>Ctrl + Alt + I</code> or <code>CMD + Opt + I</code> in Mac. While we will be primarily using R code, you could insert chunks of code in other languages like Python, C++, SQL also.</li>
+</ol>
+<p><img src="assets/ch_1-setup/gifs/notebook_anatomy.gif" /><!-- --></p>
+</div>
+<div id="working-with-a-notebook" class="section level3" number="2.8.2">
+<h3><span class="header-section-number">2.8.2</span> Working with a notebook</h3>
+<p>We will do most of the exercises and work for this book using notebooks. So let’s get comfortable with the basic workflow for using the.</p>
+<p>Let’s start by saving the notebook and previewing it as shown below. You can give the notebook any name you would like.</p>
+<p><img src="assets/ch_1-setup/gifs/save_preview.gif" /><!-- --></p>
+<p>The preview immediately launches the notebook in a different window showing the text along with the code.</p>
+<p>Next, in the files tab, navigate to the folder where you saved the notebook. Notice, how the file section in R Studio has two files. One that has the extension <code>.Rmd</code> indicating an R markdown file and another with the extension <code>.nb.html</code> indicating an HTML notebook, which is the output format that is in the YAML header. This file was created when you ‘knit’ the R markdown notebook. Knit and preview are the same for our purposes right now.</p>
+<p><img src="assets/ch_1-setup/gifs/two_files.gif" /><!-- --></p>
+<p>Try opening this file on your computer and see how it looks. The contents of this notebook are similar to webpages and can be shared with colleagues either as standalone files or as a hosted standalone webpage (we will explore how in a later section).</p>
+<p>The preview updates whenever we make any changes to the notebook and save it. Let’s see it in action. We can run a chunk of code by pressing the play button. This chunk of code generates a plot that is rendered below it. When we save the document and go back to the preview you will notice that it is automatically updated to include this plot.</p>
+<p><img src="assets/ch_1-setup/gifs/preview_updates.gif" /><!-- --></p>
+<p>Let’s update some markdown text as well to see how that renders. I am going to create a type one header. The number of <code>#</code> indicate the level of a header in markdown. Once saved the preview will now show the title styled as type one heading.</p>
+<p><img src="assets/ch_1-setup/gifs/title_updates.gif" /><!-- --></p>
+<p>Let’s add some more text.</p>
+<p><img src="assets/ch_1-setup/gifs/text_fun.gif" /><!-- --></p>
+<p>If you click on the preview dropdown, you will also notice all these other output formats that you could knit into. Try out the pdf option.</p>
+<p><img src="assets/ch_1-setup/gifs/pdf_doc.gif" /><!-- --></p>
+<p>Keep this <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">cheatsheet</a> as you use this book.</p>
+</div>
+</div>
+<div id="exercise" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Exercise</h2>
+<ol style="list-style-type: decimal">
+<li>Create a unordered bulleted list instead of an ordered one.</li>
+</ol>
 
 </div>
 </div>
@@ -283,7 +323,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="functions-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-basics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

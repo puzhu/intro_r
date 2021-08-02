@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Introduction to Functions | An illustrated introduction to R</title>
-  <meta name="description" content="Chapter 4 Introduction to Functions | An illustrated introduction to R for absolute beginners." />
+  <title>Chapter 5 The magical world of notebooks | An illustrated introduction to R</title>
+  <meta name="description" content="Chapter 5 The magical world of notebooks | An illustrated introduction to R for absolute beginners." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Introduction to Functions | An illustrated introduction to R" />
+  <meta property="og:title" content="Chapter 5 The magical world of notebooks | An illustrated introduction to R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 4 Introduction to Functions | An illustrated introduction to R for absolute beginners." />
+  <meta property="og:description" content="Chapter 5 The magical world of notebooks | An illustrated introduction to R for absolute beginners." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Introduction to Functions | An illustrated introduction to R" />
+  <meta name="twitter:title" content="Chapter 5 The magical world of notebooks | An illustrated introduction to R" />
   
-  <meta name="twitter:description" content="Chapter 4 Introduction to Functions | An illustrated introduction to R for absolute beginners." />
+  <meta name="twitter:description" content="Chapter 5 The magical world of notebooks | An illustrated introduction to R for absolute beginners." />
   
 
 <meta name="author" content="Hari Subhash" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-basics.html"/>
-<link rel="next" href="the-magical-world-of-notebooks-1.html"/>
+<link rel="prev" href="functions-intro.html"/>
+<link rel="next" href="packages-1.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -226,63 +226,54 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="functions-intro" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Introduction to Functions</h1>
-<p>In chapter <a href="setup.html#setup">2</a> section on <a href="setup.html#saving-code">saving code</a> we saw how we could save a series of programming commands in a script and then source that script whenever we needed to execute the same sequence. This meant that we did not have to type out the commands again to execute the series of steps, instead, we could simply source the script to run the sequence of steps for us.</p>
-<p>Functions are a similar concept in programming but with the additional feature of being able to pass certain values as arguments that determine the nature of the output.</p>
-<p>For instance, consider the following function <code>sum(32, 15)</code>. <code>sum</code> is the name of the function and <code>32</code> and <code>15</code> are the arguments that were passed to the function. If we changed the values of the arguments to some other numbers then the output of the sum function would change accordingly.</p>
-<p>We’d similarly used the <code>print</code> function earlier with the argument <code>"Hello World"</code>. In programming terminology, whenever we use a function in our code it is referred to as being called with its arguments. Here we called the function print with the argument “Hello World.”</p>
-<p><img src="assets/ch_3-functions/gifs/functions_syntax.gif" /><!-- --></p>
-<p>Functions are an extremely powerful tool for programming and have a lot of different benefits.</p>
-<p>Well named functions enhance the readability of your code by declaring to the reader what it is that you are doing. When a programmer uses functions like <code>sum</code> or <code>print</code>, the reader clearly understands what they are seeking to achieve. This is in contrast with a series of commands that implement the nitty-gritty details of adding two numbers or printing something to the console, which often are confusing to someone else who is not necessarily familiar with the logic behind the detailed steps.</p>
-<p>By encapsulating a series of steps in a function, you also reduce the likelihood errors that could occur if you had to copy and paste the same set of commands in different places in your code. Eliminating the need to copy paste commands also makes your code much easier to manage, since if you realize you have to modify a particular command you only have to do it within the function definition, whereas if you did not use a function, you would have to find all the places where that command appears and then change all those instances.</p>
-<div id="an-illustration" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> An illustration</h2>
-<p>Let’s explore why functions are useful and how to go about building them by teaching a computer to make tea. Imagine this computer is sending these instructions to a robot.</p>
-<p>Now, asking your computer to make tea is very different from say asking a friend of yours to make you tea.</p>
-<p>Your friend doesn’t need step by step instructions to make tea. In fact your friend would probably think that you were crazy if you told them something like “put the kettle on the stove and wait for the water to come to a boil and then open the cupboard to get a cup.” You would instead simply declare, make me some tea (please). Much like you declared print “Hello World” for me.</p>
-<p>Unlike your friend a computer needs very precise step by step instructions to make tea. So let’s look at two ways to provide this instruction. One without functions and another using functions.</p>
-<p>Let’s start by turning on our computer and asking it to boil some water for the tea.</p>
-<p>First you need to get the kettle from your cupboard.This would involve going to the cupboard, opening it, and then pulling out the kettle from the cupboard and then closing the cupboard.</p>
-<p><img src="assets/ch_3-functions/gifs/cupboard_steps.gif" /><!-- --></p>
-<p>Now we need to take the kettle to the tap and fill enough water for a cup.</p>
-<p><img src="assets/ch_3-functions/gifs/fill_water.gif" /><!-- --></p>
-<p>Next let’s give all the instructions to boil this water.</p>
-<p><img src="assets/ch_3-functions/gifs/boil_water.gif" /><!-- --></p>
-<p>Now that we have boiling water, we need to go back to the cupboard to get a cup to pour the water into.</p>
-<p><img src="assets/ch_3-functions/gifs/get_cup.gif" /><!-- --></p>
-<p>Now, the only thing missing is a tea bag. Let’s go back to the cupboard to fetch that as well.</p>
-<p><img src="assets/ch_3-functions/gifs/get_teabag.gif" /><!-- --></p>
-<p>Now we need to place the teabag in the cup and pour the water in.</p>
-<p><img src="assets/ch_3-functions/gifs/pour_water.gif" /><!-- --></p>
-<p>Enjoy your tea!</p>
+<div id="the-magical-world-of-notebooks-1" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> The magical world of notebooks</h1>
+<p>In <a href="setup.html#setup">2</a> section on <a href="setup.html#saving-code">saving code</a> we wrote some code and saved it in an R Script file. Scripts are great for saving code that you would like to execute multiple number of times. They make it much easier to write and maintain code. But they have a limitation - they are not suited for interactively exploring data.</p>
+<p>A significant portion of data science projects are spent exploring and making sense of the data. This can often require weaving text together with the code and its output. You would also want to share your work with your colleagues and being able to think out aloud in your documents while also presenting the code and its outputs makes your work easy to understand and replicate. Scripts don’t allow us to do this effectively but notebooks do.</p>
+<p>“An R Notebook is an R Markdown document with code chunks that can be executed independently and interactively, with output visible immediately beneath the input” <span class="citation">(<a href="#ref-xie2019" role="doc-biblioref">Yihui Xie 2019</a>)</span>. This chapter will explore the basic features of notebooks and how to use them.</p>
+<div id="the-anatomy-of-a-notebook" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> The anatomy of a notebook</h2>
+<p>RStudio might ask you to install a few packages if this is the first time you are doing this. Go ahead and click yes.</p>
+<p><img src="assets/ch_2-notebooks/gifs/open_notebook.gif" /><!-- --></p>
+<p>As mentioned earlier, R notebooks are a type of R markdown document. This book for instance, is also written in R markdown and is a type of R markdown document. An R markdown document is composed of the following components.</p>
+<ol style="list-style-type: decimal">
+<li><strong>YAML</strong>: At the top, we have a YAML header. YAML stands for Yet Another Markup Language. YAML is used to set the metadata for a R markdown document. For instance, here it sets the title of the notebook and specifies that the output format is an <code>html_notebook</code>. The YAML portion of the document is identified by the three <code>---</code> at the top and bottom. You will not have to worry about YAML much in the beginning since RStudio conveniently pre-populates it when you open a new R markdown document. However, as you get along on your R journey, you will learn how to use this header section to customize the look and feel of your documents.</li>
+<li><strong>Markdown</strong>: The next piece of an R markdown document is markdown. Markdown is a text markup language. Markup is simply annotations next to text that instruct the editor to render the text a particular way. For instance, <code>##</code> next to some text would indicate that the particular line of text should be rendered as a type 2 heading. This is similar to what you would do in a word processor where you would use the drop down to select a particular heading type. The only difference being that in an editor like MS Word the changes are instantaneously visible to the person who is writing, while with markdown you will only be able to see the changes when you render.</li>
+<li><strong>Code</strong>: You can insert new chunks of code into your notebooks using <code>Ctrl + Alt + I</code> or <code>CMD + Opt + I</code> in Mac. Whilw we will be primarily using R code, you could insert chunks of code in other languages like Python, C++, SQL also.</li>
+</ol>
+<p><img src="assets/ch_2-notebooks/gifs/notebook_anatomy.gif" /><!-- --></p>
 </div>
-<div id="the-function-way" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> The function way</h2>
-<p>Functions can be defined as follows <span class="citation">(<a href="#ref-function_def" role="doc-biblioref"><span>“Programming - Functions,”</span> n.d.</a>)</span></p>
-<blockquote>
-<p>Functions are self contained modules of code that accomplish a specific task</p>
-</blockquote>
-<p>So how do we recognize when to use a function in our code???</p>
-<p>The biggest hint that you can get for using a function is when you notice yourself copying and pasting code from one part of your script or notebook to another. This is usually a signal to stop and consider if it is worth the effort to encapsulate that particular sequence into a function. For instance, in our series of steps for the computer, the sequence where we go to the cupboard to fetch something is repeated and can be replaced with a function.</p>
-<p><img src="assets/ch_3-functions/gifs/repetitions.gif" /><!-- --></p>
-<p>Let’s create a function called get_item that takes the item that we would like to get from the cupboard as its argument. Notice how in the function definition, for step 3, where the computer needs to take a particular item, we use <code>item_name</code> instead of a specific item like a kettle or a cup as we did previously. This is the key design feature of functions that allows us to use it repeatedly with different parameters.</p>
-<p><img src="assets/ch_3-functions/gifs/get_item_fn.gif" /><!-- --></p>
-<p>Now we can replace all the repeated cupboard sequences with our <code>get_item()</code> function. And instead of the item_name, we use the name of the specific item that we would like to fetch from the cupboard and internally the function will replace item_name with the name of the item that we pass as an argument for the function. So get_item(“cup”) will fetch a cup from the cupboard.</p>
-<p><img src="assets/ch_3-functions/gifs/replace.gif" /><!-- --></p>
-<p>Now that we have replaced the repeated sections, we can clean up our code a little bit. The code is now much smaller and easier to understand.
-<img src="assets/ch_3-functions/gifs/clean_code.gif" /><!-- --></p>
-</div>
-<div id="more-functions" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> More functions</h2>
-<p>Now imagine if you were instead teaching the computer to cook. And making tea was one of the many other things that are included in this huge program. Some of the sequences in making tea, such as that for boiling water or putting an item into a vessel etc. are also likely to be repeated elsewhere. How would you write a function to encapsulate these actions?</p>
+<div id="the-basics" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> The basics</h2>
+<p>Give the document a name, hit save and preview it.</p>
+<p><img src="assets/ch_2-notebooks/gifs/save_preview.gif" /><!-- --></p>
+<p>The preview immediately launches the notebook in a different window showing the text along with the code.</p>
+<p>Also notice, how the file section in R Studio now has two files. One that has the extension <code>.Rmd</code> indicating an R markdown file and another with the extension <code>.nb.html</code> indicating an HTML notebook, which is the output format that is in the YAML header.</p>
+<p><img src="assets/ch_2-notebooks/gifs/two_files.gif" /><!-- --></p>
+<p>Under the hood when you ‘knit’ an Rmarkdown notebook it is handed off to the package knitr <span class="citation">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2020</a>)</span> , which executes all the code chunks and spins up an intermediate markdown document. This document is then sent to a open source converter called pandoc that converts the markdown document to the format that is set in the YAML header. <span class="citation">(<a href="#ref-hadley2017" role="doc-biblioref">Hadley Wickham 2017</a>)</span></p>
+<p><img src="assets/ch_2-notebooks/gifs/first_preview.gif" /><!-- --></p>
+<p>The preview updates whenever we make any changes to the notebook and save it. Let’s see it in action. We can run a chunk of code by pressing the play button. This chunk of code generates a plot that is rendered below it. When we save the document and go back to the preview you will notice that it is automatically updated.</p>
+<p><img src="assets/ch_2-notebooks/gifs/preview_updates.gif" /><!-- --></p>
+<p>Let’s update some markdown text as well to see how that renders. I am going to create a type one header. The number of <code>#</code> indicate the level of a header in markdown. Once saved the preview will now show the title styled as type one heading.</p>
+<p><img src="assets/ch_2-notebooks/gifs/title_updates.gif" /><!-- --></p>
+<p>Let’s add some more text for fun.</p>
+<p><img src="assets/ch_2-notebooks/gifs/text_fun.gif" /><!-- --></p>
+<p>If you click on the preview dropdown, you will also notice all these other output formats that you could knit into. Try out the pdf option.</p>
+<p><img src="assets/ch_2-notebooks/gifs/pdf_doc.gif" /><!-- --></p>
+<p>Keep this <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">cheatsheet</a> as you use this book.</p>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-function_def" class="csl-entry">
-<span>“Programming - Functions.”</span> n.d. <a href="https://www.cs.utah.edu/~germain/PPS/Topics/functions.html">https://www.cs.utah.edu/~germain/PPS/Topics/functions.html</a>.
+<div id="ref-hadley2017" class="csl-entry">
+Hadley Wickham, Garrett Grolemund. 2017. <em>R for Data Science</em>. 1st ed. O’Reilly Media. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+</div>
+<div id="ref-R-knitr" class="csl-entry">
+Xie, Yihui. 2020. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://CRAN.R-project.org/package=knitr">https://CRAN.R-project.org/package=knitr</a>.
+</div>
+<div id="ref-xie2019" class="csl-entry">
+Yihui Xie, Garrett Grolemund, J. J. Allaire. 2019. <em>R Markdown: The Definitive Guide</em>. 1st ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
 </div>
 </div>
             </section>
@@ -290,8 +281,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="r-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="the-magical-world-of-notebooks-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="functions-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="packages-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

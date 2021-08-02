@@ -1,20 +1,24 @@
-# Setup R and RStudio {#setup}
+# Get setup {#setup}
 
 In this chapter, we will install R and RStudio and get familiar with executing some code.
 
 ## Install R
-Our very first step is to download and install R. The sequence below is current as of August 2021. [CRAN](https://cran.r-project.org/), which is an open repository for R content, hosts installation files for R across different servers located around the world. I am based out of the US so I will pick one from here but you could use any of the options here to download R. On the next screen, pick the version that corresponds to your operating system and install it on your machine.
-
-```{r echo=FALSE}
-knitr::include_graphics("assets/ch_1-setup/gifs/download_r.gif")
+```{r echo=FALSE, out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics("assets/ch_1-setup/gifs/translator.gif")
 ```
 
-Once R is installed on your computer, your machine would be able to understand and execute any code that you write in R.
+Our very first step is to download and install R from [CRAN](https://cran.r-project.org/) - a repository for R. Download and install the version of R that corresponds to your operating system.
 
-## Install RStudio
-R comes with a basic editor for writing code. But we won't use it in this book. Instead we will use RStudio.
+You can think of R as an interpreter between you and your computer. Once R is installed, you can write instructions using the R programming language, which are then translated by R into a language that your computer will understand.
 
-You can think of R Studio as a fully featured editor like Microsoft Word or Google docs, while the basic editor that ships with R is like the notepad or any other basic text editor. The community version of RStudio is free and packed with features that make our lives easier.
+In the real world, using an interpreter is only possible if you speak a language that they understand. The same goes here. Our job as programmers is to write R programs that communicate clearly and without error so that these instructions can be translated effectively and relayed to the computer. In the next step we will install RStudio which is a tool that makes this task easy.
+
+## Drive a Ferarri
+In theory, you could use any text editor (like Notepad or MS Word) to write R programs. But this would be like using a kitchen knife to perform a surgery. It might get the job done, but it won't be easy or pretty.
+
+When you install R on your system, it also installs a code editor that can be used to write R programs. While this is a more appropriate tool than a text editor it is a bit basic. What we need is a Ferrari - a feature rich code editor that is built to write and manage R programs. This is what RStudio offers.
+
+RStudio is free and packed with features that make writing code in R a breeze. It also comes with a lot of other convenient features that make it really easy to manage R projects and publish your work.
 
 <!-- ```{r echo=FALSE} -->
 
@@ -24,7 +28,7 @@ You can think of R Studio as a fully featured editor like Microsoft Word or Goog
 
 You can download RStudio from the following [link](https://www.rstudio.com/products/rstudio/download/#download). Once you have R Studio installed, open it up to write your first few lines of code.
 
-## Run commands in the console
+## Meet the console - a glorified calculator {#console}
 
 Let's print("hello world") as our first command.
 
@@ -32,13 +36,13 @@ Let's print("hello world") as our first command.
 print("Hello World!")
 ```
 
-The right angle bracket with blinking cursor shows the place where we can enter commands. You should follow along with the next sequence of steps so that you get familiar with typing commands in R.
+The right angle bracket `>` with blinking cursor shows the place where we can enter commands. You should follow along with the next sequence of steps so that you get familiar with typing commands in R.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/hello_world.gif")
 ```
 
-Let's try out a few basic arithmetic operations. Enter the arithmetic as shown below one line at a time.
+Let's try out a few basic arithmetic operations. Enter the arithmetic as shown below **one line at a time**.
 
 ```{r eval=FALSE}
 2 + 2
@@ -46,29 +50,37 @@ Let's try out a few basic arithmetic operations. Enter the arithmetic as shown b
 10 > 12
 ```
 
-You can think of the R console as a calculator on steroids. Similar to the calculator it allows us to enter commands and it prints the results of those below the command.
+The pane in RStudio that we are currently using is called the console. You can think of the R console as a calculator on steroids. Similar to the calculator it allows us to enter commands and it prints the results of those below the command.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/console.gif")
 ```
 
 ## Dealing with errors
-
-Computers, unlike humans are extremely finicky and precise about language. While humans can infer meaning from jumbled up words or incomplete sentences; computers will protest and complain even if a period is not where it is supposed to be. This means that at some point we will invariably type in something that yields an error. When that happens R will return an error message like the one shown below that indicates why there was an issue with executing a particular line of code.
+Computers, unlike humans are finicky and precise about language. We can infer meaning from jumbld up wrds or incomplete senteces; while a computer will protest and complain even if a period is not where it is supposed to be. Think about them as an interpreter who will refuse to translate what you said if you did not use the correct grammar. 
+This means that at some point we will invariably type in something that yields an error. When that happens R will return an error message like the one shown below that indicates why there was an issue with executing a particular line of code.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/an_error.gif")
 ```
 
-Errors can be frustrating experience if you are new to coding. You might not immediately be able to tell why an error occurred and the error message from R can often seem very cryptic.
+Errors can be frustrating if you are new to coding. They are often cryptic and you might not be able to resolve them immediately.
 
-Errors, however, are a part and parcel of programming. And a big component of your journey as a new programmer will be to learn how to understand and resolve them. The first and often best strategy is to copy paste the error message and search on google to see if others have resolved the same error with someone else. Initially even these solutions like those on forums like [stackoverflow](https://stackoverflow.com/questions/14469486/r-issue-object-not-found) might seem hard to decipher and understand. But, eventually you will get to a point where you are not as flustered when you encounter them and have enough knowledge, tools and strategies in your arsenal to troubleshoot effectively. You might even come to enjoy the puzzle solving learning experience that an odd error brings 😄.
+But that is OK. Errors, are a part and parcel of programming. And resolving them is a key programming skill. So when you get an error, take a deep breath and remember that this is an opportunity to learn something new. 
 
-I will deliberately introduce several errors as we go through this book to get us familiarized with them and teach you how to go about resolving them.
+```{r echo=FALSE, out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics("assets/ch_1-setup/gifs/technobabble.gif")
+```
+
+Often the best strategy to find a solution is to search for the error online to see if others have resolved it with someone else's help. Initially even these [solutions](https://stackoverflow.com/questions/14469486/r-issue-object-not-found) will seem like incoherent technobabble.
+
+And right now, you might simply copy paste these solutions and move on, but, with practice and patience you will learn to troubleshoot effectively and learn from these errors. And hey, you might even come to enjoy the puzzle solving experience that an odd error brings. :smile:
 
 ## Saving code
 
-So far, we have typed commands into the console. But you will notice that there is no option to save the code that we have typed into the console. Most projects would require files that can be saved so that we can work on them over a period of time and execute them a multiple times without having to type them out each time.
+So far, we have typed commands into the console. But you will notice that there is no option to save the code that we have typed into the console. 
+
+Most projects would require files that can be saved so that we can work on them over a period of time and execute them a multiple times without having to type them out each time.
 
 We can do this by placing code inside a file. There are many different types of files but, for now let's start with a simple R script.
 
@@ -102,7 +114,9 @@ Once you have saved your file, you can run it as many times you would like witho
 knitr::include_graphics("assets/ch_1-setup/gifs/run_lines.gif")
 ```
 
-The second is by running the full script by sourcing the file. You can do this by clicking on the source button. Notice that the source command generates a new line in the history tab. This is the command that is used to source a file. Now we can close the script and paste this command from the history tab using the `To console` button and run it to execute all of the code within that script as shown below. Also notice how I use the broom `r emo::ji('broom')` icon to clear the code in the console before sourcing the script.
+The second is by running the full script by sourcing the file. Click on the dropdown instead of the button itself. You have two options - source with echo or the default source (you can ignore the third option for now). Echo, simply means to print outputs on to the console. The default option of Source will run all the lines of the code without printing anything to the console. Use the Source with echo option for this exercise.
+
+Notice that the source command generates a new line in the history tab. This is the command that is used to source a file. Now we can close the script and paste this command from the history tab using the `To console` button and run it to execute all of the code within that script as shown below. Also notice how I use the broom `r emo::ji('broom')` icon to clear the code in the console before sourcing the script.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/run_file.gif")
@@ -115,3 +129,79 @@ RStudio comes with tons of options to customize how it looks and feels. You can 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/dark.gif")
 ```
+
+Play around with the options here to find a look that you like.
+
+## The magical world of notebooks
+Scripts make it easier to write and maintain code and are great for storing code that you would like to execute multiple times. But they have a limitation - they are not suited for interactively exploring data.
+
+A significant portion of data science projects are spent exploring and making sense of the data. This can often require weaving text together with the code and its output. You would also want to share your work with your colleagues and being able to think out aloud in your documents while also presenting the code and its outputs makes your work easy to understand and replicate. Scripts don't allow us to do this effectively but notebooks do.
+
+R notebooks are built using R markdown. R markdown is an extremely versatile format that can be used to create all kinds of outputs like books, websites, presentations, word documents etc. This book is written using R markdown.
+
+Let's create a notebook using the same drop down menu as that for script. The notebook opens with some dummy text that is a good template to get started.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/open_notebook.gif")
+```
+
+### Anatomy of an R markdown document
+An R markdown document is typically composed of the following components.
+
+1.  **YAML**: At the top, we have a YAML (Yet Another Markup Language) header that is identified by the three `---` at the top and bottom. YAML is used to set the metadata for a R markdown document. For instance, in the document we just opened  it sets the title of the notebook and specifies that the output format is an `html_notebook`. There are several other options that can be specified in the header that will determine the output format (pdf, word, book, presentation etc), the design, date of publishing etc. But for now let's keep things simple and leave everything as is.
+2.  **Markdown**: Markdown is a text markup language. Markup is simply annotations next to text that instruct the editor to render the text a particular way. For instance, `##` next to some text would indicate that the particular line of text should be rendered as a type 2 heading. This is similar to what you would do in a word processor where you would use the drop down to select a particular heading type. The only difference being that in an editor like MS Word the changes are instantaneously visible to the person who is writing, while with markdown you will only be able to see the changes when you 'knit' the document. We will see how to do that shortly.
+3.  **Code**: You can insert new chunks of code into your notebooks using `Ctrl + Alt + I` or `CMD + Opt + I` in Mac. While we will be primarily using R code, you could insert chunks of code in other languages like Python, C++, SQL also.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/notebook_anatomy.gif")
+```
+
+### Working with a notebook
+We will do most of the exercises and work for this book using notebooks. So let's get comfortable with the basic workflow for using the. 
+
+Let's start by saving the notebook and previewing it as shown below. You can give the notebook any name you would like.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/save_preview.gif")
+```
+
+The preview immediately launches the notebook in a different window showing the text along with the code.
+
+Next, in the files tab, navigate to the folder where you saved the notebook. Notice, how the file section in R Studio has two files. One that has the extension `.Rmd` indicating an R markdown file and another with the extension `.nb.html` indicating an HTML notebook, which is the output format that is in the YAML header. This file was created when you 'knit' the R markdown notebook. Knit and preview are the same for our purposes right now. 
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/two_files.gif")
+```
+
+Try opening this file on your computer and see how it looks. The contents of this notebook are similar to webpages and can be shared with colleagues either as standalone files or as a hosted standalone webpage (we will explore how in a later section). 
+
+The preview updates whenever we make any changes to the notebook and save it. Let's see it in action. We can run a chunk of code by pressing the play button. This chunk of code generates a plot that is rendered below it. When we save the document and go back to the preview you will notice that it is automatically updated to include this plot.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/preview_updates.gif")
+```
+
+Let's update some markdown text as well to see how that renders. I am going to create a type one header. The number of `#` indicate the level of a header in markdown. Once saved the preview will now show the title styled as type one heading.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/title_updates.gif")
+```
+
+Let's add some more text.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/text_fun.gif")
+```
+
+If you click on the preview dropdown, you will also notice all these other output formats that you could knit into. Try out the pdf option.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/ch_1-setup/gifs/pdf_doc.gif")
+```
+
+Keep this [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) as you use this book.
+
+## Exercise
+
+1. Create a unordered bulleted list instead of an ordered one.
+

@@ -70,4 +70,7 @@ If you click on the preview dropdown, you will also notice all these other outpu
 knitr::include_graphics("assets/ch_2-notebooks/gifs/pdf_doc.gif")
 ```
 
+
+
+
 Keep this [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) as you use this book.

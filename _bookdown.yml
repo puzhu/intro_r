@@ -7,8 +7,7 @@ rmd_files:
   [
     "index.Rmd"
     ,"setup.Rmd"
-    ,"functions.Rmd"
-    ,"notebooks.Rmd"
-    , "packages.Rmd"
+    , "r_basics.Rmd"
     , "tidy_data.Rmd"
+    , "appendix.Rmd"
   ]
