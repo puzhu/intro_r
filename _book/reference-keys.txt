@@ -11,10 +11,13 @@ rstudio-look-and-feel
 the-magical-world-of-notebooks
 anatomy-of-an-r-markdown-document
 working-with-a-notebook
+exercise
 r-basics
 variables
+data-types
 functions
 packages
+install-the-tidyverse-package
 tidy-data
 appendix
 packages-1
@@ -25,6 +28,3 @@ package-documentation
 install-cowsay-package
 remove-a-package
 install-a-package-from-github
-exercise
-data-types
-install-the-tidyverse-package
