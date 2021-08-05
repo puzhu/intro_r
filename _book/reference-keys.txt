@@ -12,7 +12,7 @@ the-magical-world-of-notebooks
 anatomy-of-an-r-markdown-document
 working-with-a-notebook
 exercise
-r-basics
+basics
 variables
 data-types
 functions
@@ -28,3 +28,8 @@ package-documentation
 install-cowsay-package
 remove-a-package
 install-a-package-from-github
+how-to-use-this-book
+workflow
+save-and-preview-a-notebook
+creating-and-running-code-chunks
+exercise-1

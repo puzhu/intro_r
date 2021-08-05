@@ -156,7 +156,7 @@ An R markdown document is typically composed of the following components.
 knitr::include_graphics("assets/ch_1-setup/gifs/notebook_anatomy.gif")
 ```
 
-### Working with a notebook
+### Save and preview a notebook
 We will do most of the exercises and work for this book using notebooks. So let's get comfortable with the basic workflow for using the. 
 
 Let's start by saving the notebook and previewing it as shown below. You can give the notebook any name you would like.
@@ -175,7 +175,12 @@ knitr::include_graphics("assets/ch_1-setup/gifs/two_files.gif")
 
 Try opening this file on your computer and see how it looks. The contents of this notebook are similar to webpages and can be shared with colleagues either as standalone files or as a hosted standalone webpage (we will explore how in a later section). 
 
-The preview updates whenever we make any changes to the notebook and save it. Let's see it in action. We can run a chunk of code by pressing the play button. This chunk of code generates a plot that is rendered below it. When we save the document and go back to the preview you will notice that it is automatically updated to include this plot.
+### Creating and running Code chunks
+The sample notebook already contains a code chunk. You can create new code chunks using the shortcut `Ctrl + Alt + I` (windows) or `CMD + Option + I` (Mac). 
+
+The play button on the first line of the chunk can be used to run a code chunk. You can also just use the shortcut `Ctrl + Shift + Enter` (windows) or `CMD + Shift + Enter`. Let's try that out. The output from a particular code chunk is shown below it. In this case, the code creates a plot that is rendered below the chunk.
+
+The preview updates whenever we make any changes to the notebook and save it. When we save the document and go back to the preview you will notice that it is automatically updated to include this plot.
 
 ```{r echo=FALSE}
 knitr::include_graphics("assets/ch_1-setup/gifs/preview_updates.gif")
@@ -201,7 +206,17 @@ knitr::include_graphics("assets/ch_1-setup/gifs/pdf_doc.gif")
 
 Keep this [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) as you use this book.
 
-## Exercise
+## How to use this book {#workflow}
+This is my recommended workflow for using this book.
 
-1. Create a unordered bulleted list instead of an ordered one.
+1. Create a notebook file for each chapter
+2. Try out all the code in each chapter (you can simply copy and paste)
+3. Do the exercises
+
+### Exercise
+
+1. If you haven't done so already, create a notebook and replicate the steps in this section.
+2. Create an un ordered (bullet points) list instead of an ordered one.
+3. Create a code chunk and run the following code in it `print("Hello world")`
+4. The following bit of code has a mistake in it - `print("Fix me)`. Paste in a new code chunk and run it. Can you fix the error and re-run the chunk without generating any errors?
 

@@ -1,11 +1,27 @@
-# R basics
+# R basics {#basics}
 
 ## Variables
-So far we have used R pretty much like a glorified calculator than can perform calculations and print stuff on to the console. The results from these calculations however were not stored anywhere. However, often times we will need to do more complicated things that require us store intermediate results. We can do so using variables. Copy and run the code shown below
+So far we have used R pretty much like a glorified calculator than can perform calculations and print stuff on to the console. The results from these calculations however were not stored anywhere. However, often times we will need to do more complicated things that require us store and reference intermediate results. We can do so using variables. Copy and run the code shown below.
 
 ```{r eval=FALSE}
 my_awesome_variable <- "R is amazing"
 ```
+
+All variables will appear in the environment pane of RStudio.
+
+```{r echo=FALSE}
+knitr::include_graphics("assets/basics/var_envir.png")
+```
+You can think of the arrow `<-` as an indication that the value on the right "R is amazing" which is stored somewhere on our computers memory is being assigned the label my_awesome_variable on the left. Now, we can use this label to reference the value in that memory location whenever we need to.
+
+You can also reassign the label to a different value by simply repeating the same step as earlier but with a new value on the right side.
+
+```{r eval=FALSE}
+my_awesome_variable <- "I changed!"
+```
+
+### Exercise
+1. Create a variable on your own with your name as the value it points to. If you are using a notebook then you can insert a new chunk using the shortcut `Ctrl + Alt + I` (windows) or `CMD + Option + I` (Mac). Type the code inside this chunk.  Now try creating a variable on your own. The arrow can be a pain to type in each time. I highly recommend using the shortcut `Alt + -` (windows) or `Option + -` (mac) to insert it.
 
 ## Data types
 Don't cover factors? Do we need this here right now? I could potentially cover this much later along with data structures.
@@ -36,16 +52,21 @@ By encapsulating a series of steps in a function, you also reduce the likelihood
 One of the biggest benefits of using an open source language like R is its robust package ecosystem. A package usually contains code, data and documentation.
 
 ```{r echo=FALSE}
-knitr::include_graphics("assets/packages/gifs/package_open.gif")
+knitr::include_graphics("assets/basics/package_open.gif")
 ```
 
 The code part of a package typically contains a set of functions that we can use in our work. The functions are written and tested by someone else and this means that we don't have to go through the work of writing them ourselves. In fact, almost all of your work will be done using Packages contain a collection of such functions that have been written and tested by someone else.
 
 ```{r echo=FALSE}
-knitr::include_graphics("assets/packages/gifs/package_fn.gif")
+knitr::include_graphics("assets/basics/package_fn.gif")
 ```
 
 ### Install the tidyverse package
+The [tidyverse](https://www.tidyverse.org/) is a popular set of packages for data science that follow a consistent [set of principles](https://tidyverse.tidyverse.org/articles/manifesto.html). These packages among other things emphasize ease of use and readability of code. These packages cover almost all of your data science needs and use cases. The command below will install all the packages in the tidyverse (and saves you the trouble of having to install them one after the other). Copy and run it in your console.
+
+```{r eval=FALSE}
+install.packages("tidyverse")
+```
 
 
 
