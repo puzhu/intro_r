@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 R basics | An illustrated introduction to R</title>
-  <meta name="description" content="3 R basics | An illustrated introduction to R for absolute beginners." />
+  <title>4 Introduction to dplyr | An illustrated introduction to R</title>
+  <meta name="description" content="4 Introduction to dplyr | An illustrated introduction to R for absolute beginners." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 R basics | An illustrated introduction to R" />
+  <meta property="og:title" content="4 Introduction to dplyr | An illustrated introduction to R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="3 R basics | An illustrated introduction to R for absolute beginners." />
+  <meta property="og:description" content="4 Introduction to dplyr | An illustrated introduction to R for absolute beginners." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 R basics | An illustrated introduction to R" />
+  <meta name="twitter:title" content="4 Introduction to dplyr | An illustrated introduction to R" />
   
-  <meta name="twitter:description" content="3 R basics | An illustrated introduction to R for absolute beginners." />
+  <meta name="twitter:description" content="4 Introduction to dplyr | An illustrated introduction to R for absolute beginners." />
   
 
 <meta name="author" content="Hari Subhash" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="setup.html"/>
-<link rel="next" href="introduction-to-dplyr.html"/>
+<link rel="prev" href="basics.html"/>
+<link rel="next" href="appendix.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -166,14 +166,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.1" data-path="basics.html"><a href="basics.html#exercise-1"><i class="fa fa-check"></i><b>3.1.1</b> Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#data-types"><i class="fa fa-check"></i><b>3.2</b> Data types</a></li>
-<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#operators"><i class="fa fa-check"></i><b>3.3</b> Operators</a></li>
-<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#functions"><i class="fa fa-check"></i><b>3.4</b> Functions</a>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#functions"><i class="fa fa-check"></i><b>3.3</b> Functions</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#exercises"><i class="fa fa-check"></i><b>3.4.1</b> Exercises</a></li>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#exercises"><i class="fa fa-check"></i><b>3.3.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="basics.html"><a href="basics.html#packages"><i class="fa fa-check"></i><b>3.5</b> Packages</a>
+<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#packages"><i class="fa fa-check"></i><b>3.4</b> Packages</a>
 <ul>
-<li class="chapter" data-level="3.5.1" data-path="basics.html"><a href="basics.html#install-the-tidyverse-package"><i class="fa fa-check"></i><b>3.5.1</b> Install the tidyverse package</a></li>
+<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#install-the-tidyverse-package"><i class="fa fa-check"></i><b>3.4.1</b> Install the tidyverse package</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="introduction-to-dplyr.html"><a href="introduction-to-dplyr.html"><i class="fa fa-check"></i><b>4</b> Introduction to dplyr</a>
@@ -223,80 +222,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="basics" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> R basics</h1>
-<div id="variables" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Variables</h2>
-<p>So far we have used R pretty much like a glorified calculator than can perform calculations and print stuff on to the console. The results from these calculations however were not stored anywhere. However, often times we will need to do more complicated things that require us store and reference intermediate results. We can do so using variables. Copy and run the code shown below.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="basics.html#cb1-1" aria-hidden="true" tabindex="-1"></a>my_awesome_variable <span class="ot">&lt;-</span> <span class="st">&quot;R is amazing&quot;</span></span></code></pre></div>
-<p>All variables will appear in the environment pane of RStudio.</p>
-<p><img src="assets/basics/var_envir.png" width="618" />
-You can think of the arrow <code>&lt;-</code> as an indication that the value on the right “R is amazing” which is stored somewhere on our computers memory is being assigned the label my_awesome_variable on the left. Now, we can use this label to reference the value in that memory location whenever we need to.</p>
-<p>You can also reassign the label to a different value by simply repeating the same step as earlier but with a new value on the right side.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="basics.html#cb2-1" aria-hidden="true" tabindex="-1"></a>my_awesome_variable <span class="ot">&lt;-</span> <span class="st">&quot;I changed!&quot;</span></span></code></pre></div>
-<div id="exercise-1" class="section level3" number="3.1.1">
-<h3><span class="header-section-number">3.1.1</span> Exercise</h3>
+<div id="introduction-to-dplyr" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Introduction to dplyr</h1>
+<p>dplyr is a package that belongs to the tidyverse that is used for manipulating data. Let’s start by loading the tidyverse package into our environment.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-dplyr.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div id="composing-complex-workflows-using-pipes" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Composing complex workflows using pipes</h2>
+<p>The ability to compose a complex task by piecing together much simpler functions is an important principle of the tidyverse. The pipe operator <code>%&gt;%</code> is what connects all the simpler pieces.</p>
+<p>In a piped composition, you can think of each function doing some sort of operation on the data, the pipe than passes this transformed data to the next function. The illustration below shows a typical piped workflow. I have used shapes and colors as a way of representing data. Notice how the data is transformed in some manner in each step and then passed on to the next function in the composition. Each function on its own is doing something pretty simple but together then can be composed to perform really complex tasks.</p>
+<p><img src="assets/dplyr/dplyr_intro.gif" /><!-- -->
+A compositional approach to programming has several benefits. It is easier to write code in such a manner. Our brains work by breaking down complex tasks into smaller more manageable chunks. Code with simple and well named functions that are glued together using pipes is also easier to read and reason about thereby making it easier to collaborate and debug for errors.</p>
+<p>The pipe is a fundamental piece of the tidyverse. It is the glue that holds it together. Now let’s look a bit more closely at the anatomy of a tidyverse function.</p>
+<div id="the-anatomy-of-a-tidyverse-function" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> The anatomy of a tidyverse function</h3>
+<p>Most functions in the tidyverse follow the same pattern. The first argument in the function is <code>.data</code>. This explicitly specifies the data on which a function is being applied. The second set of arguments specify what to do with the data. For instance, the <code>select()</code> function selects columns from a table, in the illustration below it is used to select the mpg and hp columns from the cars table. Note that I haven’t specified the name of the argument in the select function. But I could have written the same function as follows <code>select(.data = cars, mpg, hp)</code> and this would do the exact same thing.</p>
+<p>The output from the select function in the illustration is piped to a filter command. The key thing to note here is the use of a <code>.</code> to specify the data. <code>.</code> simply denotes the output from the previous function in the pipe. In the case of the illustration below it indicates that the filter function should use the output from the select function before it as its data input. Again, as before, I could have written this function as <code>filter(.data = ., hp &gt; 15)</code>.</p>
+<p><img src="assets/dplyr/fn_anatomy_1.gif" /><!-- -->
+Repeatedly specifying <code>.</code> can become tedious, particularly with longer piped compositions. To avoid this the tidyverse functions allow you to optionally leave out the <code>.data</code> argument from a function. Doing this will assume that the input for the function to be the output from the previous function. So the previous illustration could be re-written as shown below.</p>
+<p><img src="assets/dplyr/fn_anatomy_12.gif" /><!-- --></p>
+<p>Now let’s look at some of the commonly used dplyr functions. We will be using the <code>starwars</code> table to explore all the functions. This data is included with the tidyverse package and is loaded when you load the library. Go ahead and type in <code>starwars</code> in your console and press enter to see it displayed.</p>
+<p><img src="assets/dplyr/starwars_table.png" width="849" /></p>
+</div>
+</div>
+<div id="select" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Select</h2>
+<p>The select command selects variables from a table. Let’s try this on the star wars table. Create a new chunk in your notebook and paste the command shown below. You could also just paste into your console to see the output there.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-dplyr.html#cb2-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="introduction-to-dplyr.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, height, mass)</span></code></pre></div>
+<p>See how the output table now only includes the three columns that we specified.</p>
+<p><img src="assets/dplyr/select_1.gif" /><!-- --></p>
+<p>The select function offers a few different ways to select columns. For instance, we could also use the position of columns in a table to select them.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-dplyr.html#cb3-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="introduction-to-dplyr.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 87 × 3
+##    name               height  mass
+##    &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt;
+##  1 Luke Skywalker        172    77
+##  2 C-3PO                 167    75
+##  3 R2-D2                  96    32
+##  4 Darth Vader           202   136
+##  5 Leia Organa           150    49
+##  6 Owen Lars             178   120
+##  7 Beru Whitesun lars    165    75
+##  8 R5-D4                  97    32
+##  9 Biggs Darklighter     183    84
+## 10 Obi-Wan Kenobi        182    77
+## # … with 77 more rows</code></pre>
+<p>We can also select a range of variables from a table using <code>:</code> symbol. Try the code below.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-dplyr.html#cb5-1" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="introduction-to-dplyr.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name<span class="sc">:</span>mass)</span></code></pre></div>
+<div id="exercises-1" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Exercises</h3>
 <ol style="list-style-type: decimal">
-<li>Create a variable on your own with your name as the value it points to. Now try creating a variable on your own. The arrow can be a pain to type in each time. I highly recommend using the shortcut <code>Alt + -</code> (windows) or <code>Option + -</code> (mac) to insert it.</li>
+<li>Select the 1st to the 6th column using <code>:</code> operator and column numbers (start column is 1 and ending column is 6).</li>
+<li>Read the documentation <a href="https://dplyr.tidyverse.org/reference/select.html">here</a> to figure out how to select all the columns with names that contain “color.”</li>
 </ol>
 </div>
 </div>
-<div id="data-types" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Data types</h2>
-<p>Objects and phenomena in the world can be described using different types of data. For instance, think about yourself, your height might be represented as a decimal point number, the number of pencils you own as an integer, your favorite book is represented using a set of characters, whether you can legally vote in your country might be represented as a boolean value (true or false) etc.</p>
-<p><ADD ANIMATION></p>
-<p>Every programming language provides a set of data types to represent all these different types of data. The data types in R that we will be using regularly are listed below</p>
-<ol style="list-style-type: decimal">
-<li>character</li>
-<li>numeric (real or decimal)</li>
-<li>integer</li>
-<li>logical</li>
-<li>factor</li>
-</ol>
+<div id="filter" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Filter</h2>
 </div>
-<div id="operators" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Operators</h2>
-<ul>
-<li><ul>
-<li>/
-&gt;
-&lt;
-==
-&amp;
-|</li>
-</ul></li>
-</ul>
+<div id="mutate" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Mutate</h2>
 </div>
-<div id="functions" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Functions</h2>
-<p>In chapter <a href="setup.html#setup">2</a> section on <a href="setup.html#saving-code">saving code</a> we saw how we could save a series of programming commands in a script and then source that script whenever we needed to execute the same sequence. This meant that we did not have to type out the commands again to execute the series of steps, instead, we could simply source the script to run the sequence of steps for us.</p>
-<p>Functions are a similar concept in programming but with the additional feature of being able to pass certain values as arguments that determine the nature of the output.</p>
-<p>For instance, consider the following function <code>sum(32, 15)</code>. <code>sum</code> is the name of the function and <code>32</code> and <code>15</code> are the arguments that were passed to the function. If we changed the values of the arguments to some other numbers then the output of the sum function would change accordingly.</p>
-<p>We’d similarly used the <code>print</code> function earlier with the argument <code>"Hello World"</code>. In programming terminology, whenever we use a function in our code it is referred to as being called with its arguments. Here we called the function print with the argument “Hello World.”</p>
-<p><img src="assets/basics/functions_syntax.gif" /><!-- --></p>
-<p>Functions are an extremely powerful tool for programming and have a lot of different benefits.</p>
-<p>Well named functions enhance the readability of your code by declaring to the reader what it is that you are doing. When a programmer uses functions like <code>sum</code> or <code>print</code>, the reader clearly understands what they are seeking to achieve. This is in contrast with a series of commands that implement the nitty-gritty details of adding two numbers or printing something to the console, which often are confusing to someone else who is not necessarily familiar with the logic behind the detailed steps.</p>
-<p>By encapsulating a series of steps in a function, you also reduce the likelihood errors that could occur if you had to copy and paste the same set of commands in different places in your code. Eliminating the need to copy paste commands also makes your code much easier to manage, since if you realize you have to modify a particular command you only have to do it within the function definition, whereas if you did not use a function, you would have to find all the places where that command appears and then change all those instances.</p>
-<div id="exercises" class="section level3" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Exercises</h3>
-<ol style="list-style-type: decimal">
-<li>Use the <code>sum()</code> function to add 568 and 92. Remember to execute your code in a code chunk if you are using a notebook.</li>
-<li>The help tab (next to packages tab) provides instructions for using different functions. Search for the help page for the print functions. By default the print command prints the output with the quotes around the character input. Use the instructions there to print “Hello world” but this time with the quotes <code>""</code> not showing in the output. Remember that you need to enclose the character input with quotes inside a print function call.</li>
-</ol>
-</div>
-</div>
-<div id="packages" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Packages</h2>
-<p>One of the biggest benefits of using an open source language like R is its robust package ecosystem. A package usually contains code, data and documentation.</p>
-<p><img src="assets/basics/package_open.gif" /><!-- --></p>
-<p>The code part of a package typically contains a set of functions that we can use in our work. The functions are written and tested by someone else and this means that we don’t have to go through the work of writing them ourselves. In fact, almost all of your work will be done using Packages contain a collection of such functions that have been written and tested by someone else.</p>
-<p><img src="assets/basics/package_fn.gif" /><!-- --></p>
-<div id="install-the-tidyverse-package" class="section level3" number="3.5.1">
-<h3><span class="header-section-number">3.5.1</span> Install the tidyverse package</h3>
-<p>The <a href="https://www.tidyverse.org/">tidyverse</a> is a popular set of packages for data science that follow a consistent <a href="https://tidyverse.tidyverse.org/articles/manifesto.html">set of principles</a>. These packages among other things emphasize ease of use and readability of code. These packages cover almost all of your data science needs and use cases. The command below will install all the packages in the tidyverse (and saves you the trouble of having to install them one after the other). Copy and run it in your console.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="basics.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
+<div id="arrange" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Arrange</h2>
 
-</div>
 </div>
 </div>
             </section>
@@ -304,8 +295,8 @@ You can think of the arrow <code>&lt;-</code> as an indication that the value on
           </div>
         </div>
       </div>
-<a href="setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-to-dplyr.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

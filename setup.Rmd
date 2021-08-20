@@ -1,6 +1,6 @@
 # Get setup {#setup}
 
-In this chapter, we will install R and RStudio and get familiar with executing some code.
+In this chapter, we will install R and RStudio and get familiar with executing some code. I highly recommend following along step by step through each section in this chapter.
 
 ## Install R
 ```{r echo=FALSE, out.extra='style="float:right; padding:10px"'}
@@ -206,17 +206,20 @@ knitr::include_graphics("assets/ch_1-setup/gifs/pdf_doc.gif")
 
 Keep this [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) as you use this book.
 
-## How to use this book {#workflow}
-This is my recommended workflow for using this book.
-
-1. Create a notebook file for each chapter
-2. Try out all the code in each chapter (you can simply copy and paste)
-3. Do the exercises
-
 ### Exercise
 
 1. If you haven't done so already, create a notebook and replicate the steps in this section.
 2. Create an un ordered (bullet points) list instead of an ordered one.
 3. Create a code chunk and run the following code in it `print("Hello world")`
 4. The following bit of code has a mistake in it - `print("Fix me)`. Paste in a new code chunk and run it. Can you fix the error and re-run the chunk without generating any errors?
+
+## How to use this book {#workflow}
+This is my recommended workflow for getting the most out of this book.
+
+1. Create a notebook file for each chapter
+2. Try out all the code in each chapter (you can simply copy and paste)
+3. Do the exercises
+
+The only way to learn R is by practicing and writing code on your own, so always try out any of the code and exercises that you see. Also test things out on your own. And don't be afraid to try variations of the code.
+
 

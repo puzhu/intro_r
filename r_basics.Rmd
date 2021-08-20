@@ -21,12 +21,28 @@ my_awesome_variable <- "I changed!"
 ```
 
 ### Exercise
-1. Create a variable on your own with your name as the value it points to. If you are using a notebook then you can insert a new chunk using the shortcut `Ctrl + Alt + I` (windows) or `CMD + Option + I` (Mac). Type the code inside this chunk.  Now try creating a variable on your own. The arrow can be a pain to type in each time. I highly recommend using the shortcut `Alt + -` (windows) or `Option + -` (mac) to insert it.
+1. Create a variable on your own with your name as the value it points to.   Now try creating a variable on your own. The arrow can be a pain to type in each time. I highly recommend using the shortcut `Alt + -` (windows) or `Option + -` (mac) to insert it.
 
 ## Data types
-Don't cover factors? Do we need this here right now? I could potentially cover this much later along with data structures.
+Objects and phenomena in the world can be described using different types of data. For instance, think about yourself, your height might be represented as a decimal point number, the number of pencils you own as an integer, your favorite book is represented using a set of characters, whether you can legally vote in your country might be represented as a boolean value (true or false) etc.
 
-1. Character
+<ADD ANIMATION>
+
+Every programming language provides a set of data types to represent all these different types of data. The data types in R that we will be using regularly are listed below
+
+1. character
+2. numeric (real or decimal)
+3. integer
+4. logical
+5. factor
+
+## Operators
++ - /
+>
+<
+==
+&
+|
 
 ## Functions
 In chapter \@ref(setup) section on [saving code] we saw how we could save a series of programming commands in a script and then source that script whenever we needed to execute the same sequence. This meant that we did not have to type out the commands again to execute the series of steps, instead, we could simply source the script to run the sequence of steps for us.
@@ -46,6 +62,11 @@ Functions are an extremely powerful tool for programming and have a lot of diffe
 Well named functions enhance the readability of your code by declaring to the reader what it is that you are doing. When a programmer uses functions like `sum` or `print`, the reader clearly understands what they are seeking to achieve. This is in contrast with a series of commands that implement the nitty-gritty details of adding two numbers or printing something to the console, which often are confusing to someone else who is not necessarily familiar with the logic behind the detailed steps.
 
 By encapsulating a series of steps in a function, you also reduce the likelihood errors that could occur if you had to copy and paste the same set of commands in different places in your code. Eliminating the need to copy paste commands also makes your code much easier to manage, since if you realize you have to modify a particular command you only have to do it within the function definition, whereas if you did not use a function, you would have to find all the places where that command appears and then change all those instances.
+
+### Exercises
+
+1. Use the `sum()` function to add 568 and 92. Remember to execute your code in a code chunk if you are using a notebook.
+2. The help tab (next to packages tab) provides instructions for using different functions. Search for the help page for the print functions. By default the print command prints the output with the quotes around the character input. Use the instructions there to print "Hello world" but this time with the quotes `""` not showing in the output. Remember that you need to enclose the character input with quotes inside a print function call.
 
 
 ## Packages
